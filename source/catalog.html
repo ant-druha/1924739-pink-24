@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8">
-    <title>Конкурс</title>
+    <title>Фотографии</title>
   </head>
   <body>
     <header class="header">
@@ -29,129 +29,160 @@
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
-            <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Фотографии</a></li>
-            <li class="main-nav__item"><a class="main-nav__link main-nav__link--current">Конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--current">Фотографии</a></li>
+            <li class="main-nav__item"><a href="contest.html" class="main-nav__link">Конкурс</a></li>
             <li class="main-nav__item"><a href="https://htmlacademy.ru/" class="main-nav__link">HTML Academy</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="contest-main">
-      <section class="contest__intro intro">
+    <main class="catalog-main">
+      <section class="catalog__intro intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-          <p class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <h1 class="intro__title title">Фотографии пользователей</h1>
+          <p class="intro__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         </div>
       </section>
-      <form class="contest-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="contest-form__person-name text-input-group wrapper">
-          <label class="text-input-group__label">Фамилия:
-            <input class="text-input-group__text" type="text" name="first-name" placeholder="Укажите фамилию *" required>
-          </label>
-          <label class="text-input-group__label">Имя:
-            <input class="text-input-group__text" type="text" name="last-name" placeholder="Укажите фамилию *" required>
-          </label>
-          <label class="text-input-group__label">Отчество:
-            <input class="text-input-group__text" type="text" name="patronymic-name" placeholder="Ну и отчество тоже">
-          </label>
-        </fieldset>
-        <fieldset class="contest-form__achievements achievements">
-          <div class="wrapper">
-            <ul class="achievements__list">
-              <li class="achievements__item">
-                <label class="achievements__label control">
-                  <input class="control__input" type="checkbox" name="shark-photo" checked>
-                  <span class="control__mark"></span>
-                  <span class="control__label">Сделал селфи с акулой</span>
+
+      <section class="catalog__gallery gallery">
+        <h2 class="visually-hidden">Галерея</h2>
+        <ul class="gallery__posts-list posts-list">
+          <li class="posts-list__item post-item">
+            <img class="post-item__image post-item__image--featured" src="img/panorama-mobile.jpg" width="320" height="137" alt="Панорамный вид с моста.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Анна</b>
+              <time class="post-item__date">(5 минут назад)</time>
+              <p class="post-item__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <div class="post-item__likes">
+                <label class="post-item__likes-label">
+                  Нравится:
+                  <output class="post-item__likes-value" name="post-likes-count">215</output>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item">
+            <img class="post-item__image post-item__image--featured" src="img/photo-1-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Левон</b>
+              <time class="post-item__date">(5 часов назад)</time>
+              <p class="post-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="post-item__likes">
+                <label class="post-item__likes-label">
+                  Нравится:
+                  <output class="post-item__likes-value" name="post-likes-count">356</output>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item">
+            <img class="post-item__image post-item__image--featured" src="img/photo-2-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Антон</b>
+              <time class="post-item__date">(12 часов назад)</time>
+              <p class="post-item__text">Соседи будут рады!</p>
+              <div class="post-item__likes">
+                <label class="post-item__likes-label">
+                  Нравится:
+                  <output class="post-item__likes-value" name="post-likes-count">666</output>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item">
+            <img class="post-item__image post-item__image--featured" src="img/photo-3-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Борис</b>
+              <time class="post-item__date">(20 часов назад)</time>
+              <p class="post-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="post-item__likes">
+                <label class="post-item__likes-label">
+                  Нравится:
+                  <output class="post-item__likes-value" name="post-likes-count">215</output>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item">
+            <img class="post-item__image post-item__image--featured" src="img/photo-4-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Сергей</b>
+              <time class="post-item__date">(25 часов назад)</time>
+              <p class="post-item__text">Самая кубанская в мире!</p>
+              <div class="post-item__likes">
+                <label class="post-item__likes-label">
+                  Нравится:
+                  <output class="post-item__likes-value" name="post-likes-count">4</output>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item">
+            <img class="post-item__image post-item__image--featured" src="img/photo-5-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Максим</b>
+              <time class="post-item__date">(40 часов назад)</time>
+              <p class="post-item__text">Где снег то?</p>
+              <div class="post-item__likes">
+                <label class="post-item__likes-label">
+                  Нравится:
+                  <output class="post-item__likes-value" name="post-likes-count">356</output>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item">
+            <img class="post-item__image post-item__image--featured" src="img/photo-6-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Надежда</b>
+              <time class="post-item__date">(45 часов назад)</time>
+              <p class="post-item__text">Всем GM и взаимные лайки!</p>
+              <div class="post-item__likes">
+                <label class="post-item__likes-label">
+                  Нравится:
+                  <output class="post-item__likes-value" name="post-likes-count">356</output>
+                </label>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="catalog-upload upload">
+        <div class="upload__wrapper">
+          <h2 class="upload__title title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+          <img class="upload__image-preview" src="img/photo-7-mobile.jpg" alt="Зимний пейзаж автомобильной дороги.">
+          <div class="upload__controls slider">
+            <p class="upload__toggles slider__toggles">
+              <button class="slider__toggle upload__crop-size slider__toggle--current" type="button"></button>
+              <button class="slider__toggle upload__saturation" type="button"></button>
+              <button class="slider__toggle upload_sharpness" type="button"></button>
+            </p>
+            <ul class="upload__controls-list slider__list">
+              <li class="upload__controls-item slider__item">
+                <label class="upload__label control">
+                  <span class="visually-hidden">Обрезка.</span>
+                  <input class="upload__control" type="range" name="photo-crop-size">
                 </label>
               </li>
-              <li class="achievements__item">
-                <label class="achievements__label control">
-                  <input class="control__input" type="checkbox" name="sun-burned" checked>
-                  <span class="control__mark"></span>
-                  <span class="control__label">Обгорел на пляже</span>
+              <li class="upload__controls-item slider__item">
+                <label class="upload__label control">
+                  <span class="visually-hidden">Насыщенность.</span>
+                  <input class="upload__control" type="range" name="photo-saturation">
                 </label>
               </li>
-              <li class="achievements__item">
-                <label class="achievements__label control">
-                  <input class="control__input" type="checkbox" name="chuck-norris">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Видел Чака Норриса</span>
-                </label>
-              </li>
-              <li class="achievements__item">
-                <label class="achievements__label control">
-                  <input class="control__input" type="checkbox" name="bought-souvenirs">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Накупил сувениров</span>
-                </label>
-              </li>
-              <li class="achievements__item">
-                <label class="achievements__label control">
-                  <input class="control__input" type="checkbox" name="hold-tower" checked>
-                  <span class="control__mark"></span>
-                  <span class="control__label">Удержал башню</span>
-                </label>
-              </li>
-              <li class="achievements__item">
-                <label class="achievements__label control">
-                  <input class="control__input" type="checkbox" name="crashed-hotel">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Разгромил отель</span>
+              <li class="upload__controls-item slider__item">
+                <label class="upload__label control">
+                  <span class="visually-hidden">Резкость.</span>
+                  <input class="upload__control" type="range" name="photo-sharpness">
                 </label>
               </li>
             </ul>
           </div>
-        </fieldset>
-        <fieldset class="contest-form__person-contacts text-input-group wrapper">
-          <label class="text-input-group__label">Номер телефона
-            <input class="text-input-group__text" type="text" name="phone" placeholder="Номер, пожалуйста">
-          </label>
-          <label class="text-input-group__label">Адрес почты
-            <input class="text-input-group__text" type="email" name="email" placeholder="Введите почту *" required>
-          </label>
-        </fieldset>
-
-        <fieldset class="contest-form__device device">
-          <div class="wrapper">
-            <ul class="device__list">
-              <li class="device__item">
-                <label class="device__label control">
-                  <input class="control__input" type="radio" name="ios" checked>
-                  <span class="control__mark"></span>
-                  <span class="control__label">Pink для iOS</span>
-                </label>
-              </li>
-              <li class="device__item">
-                <label class="device__label control">
-                  <input class="control__input" type="radio" name="android">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Pink на Android</span>
-                </label>
-              </li>
-              <li class="device__item">
-                <label class="device__label control">
-                  <input class="control__input" type="radio" name="windows">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Windows Phone</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-
-        <fieldset class="contest-form__emotions emotions wrapper">
-          <label class="emotions__label control">
-            <textarea class="control__input" name="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </label>
-        </fieldset>
-
-        <div class="wrapper">
-          <button class="contest-form-submit button-form" type="submit">Отправить форму</button>
-          <p class="contest-form-legent">* — обязательные поля</p>
         </div>
-      </form>
+      </section>
+
     </main>
 
     <footer class="footer">
