@@ -64,7 +64,8 @@
             <input class="text-input-group__text" type="text" name="patronymic-name" placeholder="Ну и отчество тоже">
           </label>
         </fieldset>
-        <fieldset class="contest-form__achievements achievements">
+        <fieldset class="contest-form__achievements contest-form__achievements">
+          <legend class="contest-form__group-title">Ваши безбашенные достижения в путешествии</legend>
           <div class="wrapper">
             <ul class="achievements__list">
               <li class="achievements__item">
@@ -113,6 +114,7 @@
           </div>
         </fieldset>
         <fieldset class="contest-form__person-contacts text-input-group wrapper">
+          <legend class="contest-form__group-title">Контактная информация</legend>
           <label class="text-input-group__label">Номер телефона
             <input class="text-input-group__text" type="text" name="phone" placeholder="Номер, пожалуйста">
           </label>
@@ -122,25 +124,26 @@
         </fieldset>
 
         <fieldset class="contest-form__device device">
+          <legend class="contest-form__group-title">С каким приложением путешествовали?</legend>
           <div class="wrapper">
             <ul class="device__list">
               <li class="device__item">
                 <label class="device__label control">
-                  <input class="control__input" type="radio" name="ios" checked>
+                  <input class="control__input" type="radio" name="platform" value="ios" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Pink для iOS</span>
                 </label>
               </li>
               <li class="device__item">
                 <label class="device__label control">
-                  <input class="control__input" type="radio" name="android">
+                  <input class="control__input" type="radio" name="platform" value="android">
                   <span class="control__mark"></span>
                   <span class="control__label">Pink на Android</span>
                 </label>
               </li>
               <li class="device__item">
                 <label class="device__label control">
-                  <input class="control__input" type="radio" name="windows">
+                  <input class="control__input" type="radio" name="platform" value="windows">
                   <span class="control__mark"></span>
                   <span class="control__label">Windows Phone</span>
                 </label>
@@ -150,6 +153,7 @@
         </fieldset>
 
         <fieldset class="contest-form__emotions emotions wrapper">
+          <legend class="contest-form__group-title">Опишите свои эмоции</legend>
           <label class="emotions__label control">
             <textarea class="control__input" name="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </label>
