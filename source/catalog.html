@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <meta charset="UTF-8">
+    <title>Фотографии</title>
   </head>
   <body>
     <header class="header">
@@ -29,10 +29,10 @@
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link">Главная</a>
+              <a href="index.html" class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html" class="main-nav__link">Фотографии</a>
+              <a class="main-nav__link main-nav__link--current">Фотографии</a>
             </li>
             <li class="main-nav__item">
               <a href="contest.html" class="main-nav__link">Конкурс</a>
@@ -45,170 +45,164 @@
       </div>
     </header>
 
-    <main class="page-main">
-      <h1 class="visually-hidden">PINK - приложение, которое сделает вашу жизнь ярче.</h1>
-
-      <section class="intro">
+    <main class="catalog">
+      <section class="catalog__intro intro">
         <div class="intro__wrapper">
-          <h2 class="intro__title title">Взгляните на жизнь иначе!</h2>
-          <img src="img/intro-image-front.png" alt="Рука, держащая телефон с ярким розовым экраном.">
-          <a class="intro__button-download" href="#">Скачать приложение</a>
-          <ul class="intro__store-list">
-            <li class="intro__store-item">
-              <a href="https://appstore.com/" class="intro__store-link intro__store-link--apple">
-                <span class="visually-hidden">Ссылка на App store</span>
-              </a>
-            </li>
-            <li class="intro__store-item">
-              <a href="https://market.android.com/" class="intro__store-link intro__store-link--android">
-                <span class="visually-hidden">Ссылка на Android store</span>
-              </a>
-            </li>
-            <li class="intro__store-item">
-              <a href="https://www.microsoft.com/store/apps/" class="intro__store-link intro__store-link--windows">
-                <span class="visually-hidden">Ссылка на Windows store</span>
-              </a>
-            </li>
-          </ul>
-          <p class="intro__note-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <h1 class="intro__title title">Фотографии пользователей</h1>
+          <p class="intro__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         </div>
       </section>
 
-      <section class="info">
-        <h2 class="info__title title">Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
-        <div class="info__wrapper">
-          <ul class="info__list list-info">
-            <li class="list-info__item list-info__item--mood">
-              <h3 class="list-info__title title">Поднимает настроение</h3>
-              <p class="list-info__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="list-info__item list-info__item--change">
-              <h3 class="list-info__title title">Меняет мир вокруг</h3>
-              <p class="list-info__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="list-info__item list-info__item--friends">
-              <h3 class="list-info__title title">Заводит новых друзей</h3>
-              <p class="list-info__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
-          <section class="info__effect">
-            <h3 class="info__effect-title">Эффект на 24 часа!</h3>
-            <p class="info__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a href="#" class="info__effect-link">Узнать больше об исследовании</a>
-          </section>
-        </div>
+      <section class="catalog__gallery gallery">
+        <h2 class="visually-hidden">Галерея</h2>
+        <ul class="gallery__posts-list posts-list">
+          <li class="posts-list__item post-item post-item--featured">
+            <img class="post-item__image" src="img/panorama-mobile.jpg" width="320" height="137" alt="Панорамный вид с моста.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Анна</b>
+              <time class="post-item__date" datetime="2021-12-01 13:30">(5 минут назад)</time>
+              <p class="post-item__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <div class="post-item__likes">
+                <p class="post-item__likes-label">
+                  Нравится:
+                  <span class="post-item__likes-value">215</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item post-item">
+            <img class="post-item__image" src="img/photo-1-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Левон</b>
+              <time class="post-item__date" datetime="2021-12-01 08:30">(5 часов назад)</time>
+              <p class="post-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="post-item__likes">
+                <p class="post-item__likes-label">
+                  Нравится:
+                  <span class="post-item__likes-value">356</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item post-item">
+            <img class="post-item__image" src="img/photo-2-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Антон</b>
+              <time class="post-item__date" datetime="2021-12-01 01:30">(12 часов назад)</time>
+              <p class="post-item__text">Соседи будут рады!</p>
+              <div class="post-item__likes">
+                <p class="post-item__likes-label">
+                  Нравится:
+                  <span class="post-item__likes-value">666</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item post-item">
+            <img class="post-item__image" src="img/photo-3-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Борис</b>
+              <time class="post-item__date" datetime="2021-11-30 17:30">(20 часов назад)</time>
+              <p class="post-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="post-item__likes">
+                <p class="post-item__likes-label">
+                  Нравится:
+                  <span class="post-item__likes-value">215</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item post-item">
+            <img class="post-item__image" src="img/photo-4-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Сергей</b>
+              <time class="post-item__date" datetime="2021-11-30 12:30">(25 часов назад)</time>
+              <p class="post-item__text">Самая кубанская в мире!</p>
+              <div class="post-item__likes">
+                <p class="post-item__likes-label">
+                  Нравится:
+                  <span class="post-item__likes-value">4</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item post-item">
+            <img class="post-item__image" src="img/photo-5-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Максим</b>
+              <time class="post-item__date" datetime="2021-11-29 21:30">(40 часов назад)</time>
+              <p class="post-item__text">Где снег то?</p>
+              <div class="post-item__likes">
+                <p class="post-item__likes-label">
+                  Нравится:
+                  <span class="post-item__likes-value">356</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="posts-list__item post-item">
+            <img class="post-item__image" src="img/photo-6-mobile.jpg" width="280" height="180" alt="Белый автомобиль.">
+            <div class="post-item__legend">
+              <b class="post-item__author">Надежда</b>
+              <time class="post-item__date" datetime="2021-11-29 16:30">(45 часов назад)</time>
+              <p class="post-item__text">Всем GM и взаимные лайки!</p>
+              <div class="post-item__likes">
+                <p class="post-item__likes-label">
+                  Нравится:
+                  <span class="post-item__likes-value">356</span>
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </section>
 
-      <section class="reviews">
-        <h2 class="visually-hidden">Отзывы о нас.</h2>
-        <div class="reviews__wrapper slider">
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__author-info">25 лет, водитель трамвая</p>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <button class="reviews__prev" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="reviews__next" type="button">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
+      <form class="upload" action="https://echo.htmlacademy.ru" enctype="multipart/form-data" method="post">
+        <div class="upload__wrapper">
+          <h2 class="upload__title title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+          <div class="upload__image">
+            <label class="upload__image-label">Выберите файл для загрузки
+              <input class="upload__image-input" type="file" name="file" accept="image/*">
+            </label>
+            <img class="upload__image-preview" src="img/photo-7-mobile.jpg" alt="Зимний пейзаж автомобильной дороги.">
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+          <div class="upload__controls slider">
+            <p class="upload__toggles slider__toggles">
+              <button class="upload__crop-size slider__toggle slider__toggle--current" type="button">
+                <span class="visually-hidden">Изменить обрезку.</span>
+              </button>
+              <button class="upload__saturation slider__toggle" type="button">
+                <span class="visually-hidden">Изменить насыщенность.</span>
+              </button>
+              <button class="upload__sharpness slider__toggle" type="button">
+                <span class="visually-hidden">Изменить резкость.</span>
+              </button>
+            </p>
+            <ul class="upload__controls-list slider__list">
+              <li class="upload__controls-item slider__item">
+                <label class="upload__label control">
+                  <span class="visually-hidden">Обрезка.</span>
+                  <input class="upload__control" type="range" name="photo-crop-size" min="1" max="100" value="85">
+                </label>
+              </li>
+              <li class="upload__controls-item slider__item">
+                <label class="upload__label control">
+                  <span class="visually-hidden">Насыщенность.</span>
+                  <input class="upload__control" type="range" name="photo-saturation" min="1" max="100" value="15">
+                </label>
+              </li>
+              <li class="upload__controls-item slider__item">
+                <label class="upload__label control">
+                  <span class="visually-hidden">Резкость.</span>
+                  <input class="upload__control" type="range" name="photo-sharpness" min="1" max="100" value="55">
+                </label>
+              </li>
+            </ul>
+          </div>
+          <button class="upload__button upload-submit" type="submit">Запостить</button>
+          <button class="upload__button upload-reset" type="reset">Отмена</button>
         </div>
-      </section>
-
-      <section class="tariffs">
-        <h2 class="visually-hidden">Тарифы и цены.</h2>
-
-        <div class="tariffs__wrapper slider">
-          <table class="tariffs__table table-tariffs">
-            <thead class="table-tariffs__header">
-            <tr class="table-tariffs__row slider__list">
-              <th class="table-tariffs__header"></th>
-              <th class="table-tariffs__header slider__item">
-                <b class="table-tariffs__title">База</b>
-                <p class="table-tariffs__price">1.99 USD</p>
-              </th>
-              <th class="table-tariffs__header table-tariffs__header--popular slider__item">
-                <b class="table-tariffs__title">Стандарт</b>
-                <p class="table-tariffs__price">3.99 USD</p>
-              </th>
-              <th class="table-tariffs__header slider__item">
-                <b class="table-tariffs__title">Анлим</b>
-                <p class="table-tariffs__price">9.99 USD</p>
-              </th>
-            </tr>
-            </thead>
-            <tbody class="table-tariffs__body">
-            <tr class="table-tariffs__row tariffs-feature">
-              <td class="tariffs-feature__name">Розовый фильтр</td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-            </tr>
-            <tr class="table-tariffs__row tariffs-feature">
-              <td class="tariffs-feature__name">Смайлики</td>
-              <td class="tariffs-feature__value tariffs-feature__value--excluded">
-                <span class="visually-hidden">Нет</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-            </tr>
-            <tr class="table-tariffs__row tariffs-feature">
-              <td class="tariffs-feature__name">Комментарии</td>
-              <td class="tariffs-feature__value tariffs-feature__value--excluded">
-                <span class="visually-hidden">Нет</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--excluded">
-                <span class="visually-hidden">Нет</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-          <p class="tariffs__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle slider__toggle--current" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
-        </div>
-      </section>
-
-      <section class="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__title title">Остались вопросы? Свяжитесь с нами!</h2>
-          <p class="contacts__phone">Звоните:
-            <a class="contacts__phone-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-          </p>
-          <p class="contacts__email">Пишите:
-            <a class="contacts__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-          <address class="contacts__address">Приезжайте в гости:
-            <p class="contacts__address-text">ул. Большая Конюшенная, 19/8</p>
-          </address>
-        </div>
-        <div class="contacts__map">
-          <img src="img/map.png" alt="Карта с адресом компании.">
-        </div>
-      </section>
+      </form>
 
     </main>
 
@@ -252,5 +246,6 @@
         </div>
       </div>
     </footer>
+
   </body>
 </html>
