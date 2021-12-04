@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link rel="stylesheet" type="text/css" href="less/components/intro.less"/>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="header">
-      <div class="header__wrapper">
+      <div class="header__wrapper wrapper">
         <a class="header__logo logo">
           <svg class="header__logo-image logo__image" width="59" height="40" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -49,34 +51,40 @@
       <h1 class="visually-hidden">PINK - приложение, которое сделает вашу жизнь ярче.</h1>
 
       <section class="intro">
-        <div class="intro__wrapper">
-          <h2 class="intro__title title">Взгляните на жизнь иначе!</h2>
-          <img src="img/intro-image-front.png" alt="Рука, держащая телефон с ярким розовым экраном.">
-          <a class="intro__button-download" href="#">Скачать приложение</a>
-          <ul class="intro__store-list">
-            <li class="intro__store-item">
-              <a href="https://appstore.com/" class="intro__store-link intro__store-link--apple">
-                <span class="visually-hidden">Ссылка на App store</span>
-              </a>
-            </li>
-            <li class="intro__store-item">
-              <a href="https://market.android.com/" class="intro__store-link intro__store-link--android">
-                <span class="visually-hidden">Ссылка на Android store</span>
-              </a>
-            </li>
-            <li class="intro__store-item">
-              <a href="https://www.microsoft.com/store/apps/" class="intro__store-link intro__store-link--windows">
-                <span class="visually-hidden">Ссылка на Windows store</span>
-              </a>
-            </li>
-          </ul>
-          <p class="intro__note-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="intro__top">
+          <div class="intro__wrapper wrapper">
+            <h2 class="intro__title title">Взгляните на жизнь иначе!</h2>
+          </div>
+          <img class="intro__top-image" src="img/intro-image-front.png" alt="Рука, держащая телефон с ярким розовым экраном.">
+        </div>
+        <div class="intro__bottom">
+          <div class="intro__wrapper wrapper">
+            <a class="intro__button-download" href="#">Скачать приложение</a>
+            <ul class="intro__store-list">
+              <li class="intro__store-item">
+                <a href="https://appstore.com/" class="intro__store-link intro__store-link--apple">
+                  <span class="visually-hidden">Ссылка на App store</span>
+                </a>
+              </li>
+              <li class="intro__store-item">
+                <a href="https://market.android.com/" class="intro__store-link intro__store-link--android">
+                  <span class="visually-hidden">Ссылка на Android store</span>
+                </a>
+              </li>
+              <li class="intro__store-item">
+                <a href="https://www.microsoft.com/store/apps/" class="intro__store-link intro__store-link--windows">
+                  <span class="visually-hidden">Ссылка на Windows store</span>
+                </a>
+              </li>
+            </ul>
+            <p class="intro__note-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
         </div>
       </section>
 
       <section class="info">
-        <h2 class="info__title title">Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
-        <div class="info__wrapper">
+        <div class="info__wrapper wrapper">
+          <h2 class="info__title title">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</h2>
           <ul class="info__list list-info">
             <li class="list-info__item list-info__item--mood">
               <h3 class="list-info__title title">Поднимает настроение</h3>
@@ -92,7 +100,7 @@
             </li>
           </ul>
           <section class="info__effect">
-            <h3 class="info__effect-title">Эффект на 24 часа!</h3>
+            <h3 class="info__effect-title title">Эффект<br>на 24 часа!</h3>
             <p class="info__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
             <a href="#" class="info__effect-link">Узнать больше об исследовании</a>
           </section>
@@ -101,7 +109,7 @@
 
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы о нас.</h2>
-        <div class="reviews__wrapper slider">
+        <div class="reviews__wrapper wrapper slider">
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
               <cite class="reviews__author-name">Николай Петров</cite>
@@ -126,7 +134,7 @@
       <section class="tariffs">
         <h2 class="visually-hidden">Тарифы и цены.</h2>
 
-        <div class="tariffs__wrapper slider">
+        <div class="tariffs__wrapper wrapper slider">
           <table class="tariffs__table table-tariffs">
             <thead class="table-tariffs__header">
             <tr class="table-tariffs__row slider__list">
@@ -146,39 +154,39 @@
             </tr>
             </thead>
             <tbody class="table-tariffs__body">
-            <tr class="table-tariffs__row tariffs-feature">
-              <td class="tariffs-feature__name">Розовый фильтр</td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
+            <tr class="table-tariffs__row table-tariffs__feature">
+              <td class="table-tariffs__feature-name">Розовый фильтр</td>
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--included">
                 <span class="visually-hidden">Да</span>
               </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--included">
                 <span class="visually-hidden">Да</span>
               </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-            </tr>
-            <tr class="table-tariffs__row tariffs-feature">
-              <td class="tariffs-feature__name">Смайлики</td>
-              <td class="tariffs-feature__value tariffs-feature__value--excluded">
-                <span class="visually-hidden">Нет</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
-                <span class="visually-hidden">Да</span>
-              </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--included">
                 <span class="visually-hidden">Да</span>
               </td>
             </tr>
-            <tr class="table-tariffs__row tariffs-feature">
-              <td class="tariffs-feature__name">Комментарии</td>
-              <td class="tariffs-feature__value tariffs-feature__value--excluded">
+            <tr class="table-tariffs__row table-tariffs__feature">
+              <td class="table-tariffs__feature-name">Смайлики</td>
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--excluded">
                 <span class="visually-hidden">Нет</span>
               </td>
-              <td class="tariffs-feature__value tariffs-feature__value--excluded">
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--included">
+                <span class="visually-hidden">Да</span>
+              </td>
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--included">
+                <span class="visually-hidden">Да</span>
+              </td>
+            </tr>
+            <tr class="table-tariffs__row table-tariffs__feature">
+              <td class="table-tariffs__feature-name">Комментарии</td>
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--excluded">
                 <span class="visually-hidden">Нет</span>
               </td>
-              <td class="tariffs-feature__value tariffs-feature__value--included">
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--excluded">
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="table-tariffs__feature-value table-tariffs__feature-value--included">
                 <span class="visually-hidden">Да</span>
               </td>
             </tr>
@@ -193,27 +201,27 @@
       </section>
 
       <section class="contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper wrapper">
           <h2 class="contacts__title title">Остались вопросы? Свяжитесь с нами!</h2>
-          <p class="contacts__phone">Звоните:
-            <a class="contacts__phone-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          <p class="contacts__type">Звоните:
+            <a class="contacts__type-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </p>
-          <p class="contacts__email">Пишите:
-            <a class="contacts__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <p class="contacts__type">Пишите:
+            <a class="contacts__type-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
-          <address class="contacts__address">Приезжайте в гости:
-            <p class="contacts__address-text">ул. Большая Конюшенная, 19/8</p>
+          <address class="contacts__type">Приезжайте в гости:
+            <p class="contacts__type-text">ул. Большая Конюшенная, 19/8</p>
           </address>
         </div>
         <div class="contacts__map">
-          <img src="img/map.png" alt="Карта с адресом компании.">
+          <img class="contacts__map-image" src="img/map.png" alt="Карта с адресом компании.">
         </div>
       </section>
 
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper wrapper">
         <a class="footer__logo logo">
           <svg class="footer__logo-image logo__image" width="59" height="40" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -245,7 +253,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             Разработано
             <span class="visually-hidden">Ссылка на интенсив HTML Academy по адаптивной верстке сайтов.</span>
-            <svg width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
+            <svg class="copyright__logo" width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
             </svg>
           </a>

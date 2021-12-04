@@ -1,0 +1,71 @@
+
+
+.intro {
+  color: #ffffff;
+}
+
+.intro__wrapper {
+  text-align: center;
+}
+
+.intro__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 34px;
+}
+
+.intro__top {
+  padding-top: 29px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -66px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url("../../img/back-mobile.jpg") center / cover;
+  }
+}
+
+.intro__top-image {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.intro__bottom {
+  background-color: #1d2631;
+  padding-top: 28px;
+  padding-bottom: 38px;
+}
+
+.intro__button-download {
+  display: block;
+  padding: 19px 35px;
+  border: 3px solid #ffffff;
+  border-radius: 29px;
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 38px;
+}
+
+.intro__store-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 31px;
+}
+
+.intro__store-item {
+  &:not(:last-of-type) {
+    margin-right: 35px;
+  }
+}
+
+.intro__note-text {
+  margin: 0;
+}
