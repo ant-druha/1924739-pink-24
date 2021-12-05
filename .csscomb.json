@@ -61,13 +61,20 @@
       "background-color",
       "border",
       "border-radius",
-      "opacity"
+      "opacity",
+      "cursor"
     ],
     [
       "transition"
     ],
     [
       "will-change"
+    ],
+    [
+      "$include"
+    ],
+    [
+      "$include media"
     ]
   ]
 }
