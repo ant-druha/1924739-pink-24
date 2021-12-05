@@ -1,25 +1,21 @@
 
 
-.intro {
-  color: #ffffff;
-}
-
 .intro__wrapper {
   text-align: center;
 }
 
 .intro__title {
+  display: block;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
-  margin-bottom: 34px;
 }
 
 .intro__top {
-  padding-top: 29px;
   position: relative;
   text-align: center;
+  color: #ffffff;
 
   &::before {
     content: "";
@@ -29,7 +25,22 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url("../../img/back-mobile.jpg") center / cover;
+    background: url("../../img/back-mobile.jpg") @blue-gray;
+    background-size: cover;
+  }
+
+  &--index {
+    padding-top: 29px;
+  }
+
+  &--contest {
+    padding-top: 36px;
+    padding-bottom: 51px;
+  }
+
+  &--catalog {
+    padding-top: 36px;
+    padding-bottom: 84px;
   }
 }
 
@@ -38,15 +49,35 @@
   vertical-align: top;
 }
 
-.intro__bottom {
+.intro__bottom--index {
+  color: #ffffff;
   background-color: #1d2631;
   padding-top: 28px;
   padding-bottom: 38px;
 }
 
+.intro__bottom--contest {
+  color: @blue-gray;
+  background-color: #ffffff;
+  padding-top: 54px;
+  padding-bottom: 55px;
+}
+
+.intro__bottom--catalog {
+  color: @blue-gray;
+  background-color: #ffffff;
+  padding-top: 54px;
+  padding-bottom: 60px;
+}
+
 .intro__button-download {
-  display: block;
-  padding: 19px 35px;
+  display: inline-flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  padding: 15.5px 0;
+  width: 280px;
   border: 3px solid #ffffff;
   border-radius: 29px;
   color: inherit;
@@ -68,4 +99,11 @@
 
 .intro__note-text {
   margin: 0;
+}
+
+.intro__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 214%;
+  color: @blue-gray;
 }
