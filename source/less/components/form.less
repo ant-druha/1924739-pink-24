@@ -1,18 +1,20 @@
 
 .form {
   display: flex;
+
   flex-direction: column;
 }
 
 .form__fieldset {
-  //border: 2px solid @light-grey;
-  border: none;
   padding: 42px 0 44px;
+  //border: 2px solid @light-grey;
+
+  border: none;
 }
 
 .form__achievements {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 .form__emotions {
@@ -29,12 +31,14 @@
 }
 
 .form__group-title {
-  text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 44px;
+
   font-size: 14px;
   line-height: 129%;
-  margin-bottom: 44px;
+  text-align: center;
   color: @pinky-red;
+
+  text-transform: uppercase;
 }
 
 .form__person-name {
@@ -49,24 +53,29 @@
 
 .form__input-label {
   display: block;
+  margin-bottom: 17px;
+  margin-left: 23px;
+
   font-size: 14px;
   line-height: 214%;
-  text-transform: uppercase;
   color: @pinky-red;
-  margin-left: 23px;
-  margin-bottom: 17px;
+
+  text-transform: uppercase;
 }
 
 .form__input-text {
   display: block;
+  width: 100%;
+  padding: 23px 0 23px 20px;
+
   font-size: 18px;
   line-height: 167%;
   color: @blue-gray;
+
   border: none;
-  outline: 2px solid @light-grey;
   border-radius: 1px;
-  padding: 23px 0 23px 20px;
-  width: 100%;
+
+  outline: 2px solid @light-grey;
 
   &::placeholder {
     color: @blue-gray;

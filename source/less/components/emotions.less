@@ -5,24 +5,28 @@
 
 .emotions__label {
   display: block;
-  text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 22px;
+
   font-size: 14px;
   line-height: 129%;
-  margin-bottom: 22px;
+  text-align: center;
   color: @pinky-red;
+
+  text-transform: uppercase;
 }
 
 .emotions__text {
+  min-height: 197px;
+  padding: 22px 20px;
+
   font-size: 18px;
   line-height: 167%;
   color: @blue-gray;
-  padding: 22px 20px;
 
   border: none;
-  outline: 2px solid @light-grey2;
   border-radius: 1px;
-  min-height: 197px;
+
+  outline: 2px solid @light-grey2;
   //margin-bottom: 52px;
 
   &::placeholder {

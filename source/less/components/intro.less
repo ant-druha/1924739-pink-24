@@ -6,25 +6,28 @@
 
 .intro__title {
   display: block;
+
   font-style: normal;
-  font-weight: 300;
   font-size: 24px;
   line-height: 120%;
+  font-weight: 300;
 }
 
 .intro__top {
   position: relative;
+
   text-align: center;
   color: #ffffff;
 
   &::before {
-    content: "";
     position: absolute;
     top: -66px;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     z-index: -1;
+
+    content: "";
     background: url("../../img/back-mobile.jpg") @blue-gray;
     background-size: cover;
   }
@@ -46,49 +49,60 @@
 
 .intro__top-image {
   display: inline-block;
+
   vertical-align: top;
 }
 
 .intro__bottom-index {
-  color: #ffffff;
-  background-color: #1d2631;
   padding-top: 28px;
   padding-bottom: 38px;
+
+  color: #ffffff;
+
+  background-color: #1d2631;
 }
 
 .intro__bottom-contest {
-  color: @blue-gray;
-  background-color: #ffffff;
   padding-top: 54px;
   padding-bottom: 55px;
+
+  color: @blue-gray;
+
+  background-color: #ffffff;
 }
 
 .intro__bottom-catalog {
-  color: @blue-gray;
-  background-color: #ffffff;
   padding-top: 54px;
   padding-bottom: 60px;
+
+  color: @blue-gray;
+
+  background-color: #ffffff;
 }
 
 .intro__button-download {
   display: inline-flex;
   justify-content: center;
-  font-weight: bold;
+  width: 280px;
+  margin-bottom: 38px;
+  padding: 15.5px 0;
+
   font-size: 18px;
   line-height: 100%;
-  padding: 15.5px 0;
-  width: 280px;
+  font-weight: bold;
+  color: inherit;
+
   border: 3px solid #ffffff;
   border-radius: 29px;
-  color: inherit;
+
   text-decoration: none;
-  margin-bottom: 38px;
 }
 
 .intro__store-list {
-  list-style-type: none;
-  padding: 0;
   margin: 0 0 31px;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .intro__store-item {
@@ -103,6 +117,7 @@
 
 .intro__text {
   margin: 0;
+
   font-size: 14px;
   line-height: 214%;
   color: @blue-gray;
