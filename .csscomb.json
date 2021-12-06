@@ -1,0 +1,80 @@
+{
+  "always-semicolon": true,
+  "block-indent": "  ",
+  "color-case": "lower",
+  "color-shorthand": false,
+  "eof-newline": true,
+  "quotes": "double",
+  "remove-empty-rulesets": true,
+  "space-after-colon": " ",
+  "space-after-opening-brace": "\n",
+  "space-before-closing-brace": "\n",
+  "space-before-colon": "",
+  "space-before-opening-brace": " ",
+  "strip-spaces": true,
+  "unitless-zero": true,
+  "sort-order": [
+    [
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "z-index"
+    ],
+    [
+      "display",
+      "justify-content",
+      "align-items",
+      "align-self",
+      "float",
+      "width",
+      "min-width",
+      "max-width",
+      "height",
+      "min-height",
+      "max-height",
+      "margin",
+      "margin-top",
+      "margin-right",
+      "margin-bottom",
+      "margin-left",
+      "padding",
+      "padding-top",
+      "padding-right",
+      "padding-bottom",
+      "padding-left"
+    ],
+    [
+      "font-family",
+      "font-style",
+      "font-size",
+      "line-height",
+      "font-weight",
+      "text-align",
+      "color"
+    ],
+    [
+      "text-transform",
+      "list-style",
+      "list-style-type",
+      "background-color",
+      "border",
+      "border-radius",
+      "opacity",
+      "cursor"
+    ],
+    [
+      "transition"
+    ],
+    [
+      "will-change"
+    ],
+    [
+      "$include"
+    ],
+    [
+      "$include media"
+    ]
+  ]
+}
