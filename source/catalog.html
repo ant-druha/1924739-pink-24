@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Фотографии</title>
   </head>
@@ -167,50 +168,46 @@
       </section>
 
       <form class="upload" action="https://echo.htmlacademy.ru" enctype="multipart/form-data" method="post">
-        <div class="upload__wrapper">
-          <h2 class="upload__title title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
-          <div class="upload__image">
-            <img class="upload__image-preview" width="280" height="374" src="img/photo-7-mobile.jpg" alt="Зимний пейзаж автомобильной дороги.">
-          </div>
-          <div class="upload__controls slider">
-            <div class="wrapper">
-              <p class="upload__toggles slider__toggles">
-                <button class="upload__crop-size slider__toggle slider__toggle--current" type="button">
-                  <span class="visually-hidden">Изменить обрезку.</span>
-                </button>
-                <button class="upload__saturation slider__toggle" type="button">
-                  <span class="visually-hidden">Изменить насыщенность.</span>
-                </button>
-                <button class="upload__sharpness slider__toggle" type="button">
-                  <span class="visually-hidden">Изменить резкость.</span>
-                </button>
-              </p>
-              <ul class="upload__controls-list slider__list">
-                <li class="upload__controls-item slider__item">
-                  <label class="upload__label control">
-                    <span class="visually-hidden">Обрезка.</span>
-                    <input class="upload__control" type="range" name="photo-crop-size" min="1" max="100" value="85">
-                  </label>
-                </li>
-                <li class="upload__controls-item slider__item">
-                  <label class="upload__label control">
-                    <span class="visually-hidden">Насыщенность.</span>
-                    <input class="upload__control" type="range" name="photo-saturation" min="1" max="100" value="15">
-                  </label>
-                </li>
-                <li class="upload__controls-item slider__item">
-                  <label class="upload__label control">
-                    <span class="visually-hidden">Резкость.</span>
-                    <input class="upload__control" type="range" name="photo-sharpness" min="1" max="100" value="55">
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="wrapper">
-            <button class="upload__button upload-submit" type="submit">Запостить</button>
-            <button class="upload__button upload-reset" type="reset">Отмена</button>
-          </div>
+        <h2 class="upload__title title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
+        <div class="upload__image">
+          <img class="upload__image-preview" width="280" height="374" src="img/photo-7-mobile.jpg" alt="Зимний пейзаж автомобильной дороги.">
+        </div>
+        <div class="upload__controls slider">
+          <p class="upload__toggles slider__toggles">
+            <button class="upload__crop-size slider__toggle slider__toggle--current" type="button">
+              <span class="visually-hidden">Изменить обрезку.</span>
+            </button>
+            <button class="upload__saturation slider__toggle" type="button">
+              <span class="visually-hidden">Изменить насыщенность.</span>
+            </button>
+            <button class="upload__sharpness slider__toggle" type="button">
+              <span class="visually-hidden">Изменить резкость.</span>
+            </button>
+          </p>
+          <ul class="upload__controls-list slider__list">
+            <li class="upload__controls-item slider__item">
+              <label class="upload__label control">
+                <span class="visually-hidden">Обрезка.</span>
+                <input class="upload__control" type="range" name="photo-crop-size" min="1" max="100" value="85">
+              </label>
+            </li>
+            <li class="upload__controls-item slider__item">
+              <label class="upload__label control">
+                <span class="visually-hidden">Насыщенность.</span>
+                <input class="upload__control" type="range" name="photo-saturation" min="1" max="100" value="15">
+              </label>
+            </li>
+            <li class="upload__controls-item slider__item">
+              <label class="upload__label control">
+                <span class="visually-hidden">Резкость.</span>
+                <input class="upload__control" type="range" name="photo-sharpness" min="1" max="100" value="55">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="upload__buttons">
+          <button class="upload__button upload-submit" type="submit">Запостить</button>
+          <button class="upload__button upload-reset" type="reset">Отмена</button>
         </div>
       </form>
 
