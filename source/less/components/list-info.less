@@ -46,6 +46,8 @@
 }
 
 .list-info__item {
+  z-index: 2;
+
   &:not(:last-child) {
     margin-bottom: 43px;
   }
@@ -89,8 +91,8 @@
   color: #000000;
 
   &::before {
-    //todo how to make the image of the shadow to be displayed above the phone?
-    z-index: 2;
+    position: relative;
+    z-index: -1;
 
     display: block;
     width: 300px;
@@ -98,7 +100,11 @@
     margin-right: auto;
     margin-left: auto;
 
-    background: url("../../img/effect-shadow.png") bottom 5px center no-repeat;
+    opacity: 0.3;
+
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 49.8%, rgba(0, 0, 0, 0) 93.23%);
+    filter: blur(4px);
 
     @media (min-width: @desktop-width) {
       content: "";
