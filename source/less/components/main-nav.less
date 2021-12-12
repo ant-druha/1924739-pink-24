@@ -4,6 +4,16 @@
   padding: 0;
 
   .list-style-default;
+
+  gap: 59px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  display: block;
 }
 
 .main-nav__toggle {
@@ -14,9 +24,15 @@
   border: none;
 
   background: url("../../img/main-nav-toggle-btn.svg") no-repeat center;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__link {
+  padding: 5px 10px;
+
   font-style: inherit;
   font-size: 18px;
   line-height: 1;

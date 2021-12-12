@@ -1,6 +1,4 @@
 .header {
-  padding: 21px 0;
-
   color: #ffffff;
 
   background-color: @header-bg-color;
@@ -15,11 +13,22 @@
 
 .header__logo-image {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
 }
 
 .header__wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+    padding-bottom: 43px;
+  }
 }
 
 .header__main-nav {

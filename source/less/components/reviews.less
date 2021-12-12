@@ -3,13 +3,37 @@
 
   font-size: 14px;
   line-height: 2.14;
+  text-align: center;
+
+  &::before {
+    display: inline-block;
+    width: 79px;
+    height: 63px;
+
+    background-image: url("../../img/quotes.png");
+
+    @media (min-width: @desktop-width) {
+      content: "";
+    }
+  }
 }
 
 .reviews__item {
+  display: flex;
   margin: 0;
   padding: 0;
 
   text-align: center;
+
+  flex-direction: column;
+}
+
+.reviews__signature {
+  @media (min-width: @tablet-width) {
+    margin-top: 51px;
+
+    order: 2;
+  }
 }
 
 .reviews__author-name {
@@ -23,11 +47,16 @@
 }
 
 .reviews__author-info {
+  display: none;
   margin: 0;
   padding: 0;
 
   font-size: 14px;
   line-height: 2.14;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .reviews__text {
@@ -38,4 +67,22 @@
   margin: 0;
 
   text-align: center;
+
+  .slider__toggle {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  .slider__toggle:first-of-type {
+    @media (min-width: @desktop-width) {
+      display: inline-block;
+    }
+  }
+
+  .slider__toggle:last-of-type {
+    @media (min-width: @desktop-width) {
+      display: inline-block;
+    }
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
@@ -50,11 +51,8 @@
       <h1 class="visually-hidden">PINK - приложение, которое сделает вашу жизнь ярче.</h1>
 
       <section class="index__intro intro">
-        <div class="intro__top intro__top--index">
-          <div class="intro__wrapper wrapper">
-            <h2 class="index__intro-title intro__title title">Взгляните на жизнь иначе!</h2>
-          </div>
-          <img class="intro__top-image" src="img/intro-image-front.png" alt="Рука, держащая телефон с ярким розовым экраном.">
+        <div class="intro__wrapper wrapper">
+          <h2 class="index__intro-title intro__title title">Взгляните на жизнь иначе!</h2>
         </div>
         <div class="intro__bottom-index">
           <div class="intro__wrapper wrapper">
@@ -99,9 +97,10 @@
             </li>
           </ul>
           <section class="info__effect">
-            <h3 class="info__effect-title title">Эффект<br>на 24 часа!</h3>
-            <p class="info__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a href="#" class="info__effect-link">Узнать больше об исследовании</a>
+            <div class="info__effect-content">
+              <h3 class="info__effect-title title">Эффект<br>на 24 часа!</h3>
+              <p class="info__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <a href="#" class="info__effect-link">Узнать больше об исследовании</a></div>
           </section>
         </div>
       </section>
@@ -111,16 +110,12 @@
         <div class="reviews__wrapper wrapper slider">
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__author-info">25 лет, водитель трамвая</p>
+              <div class="reviews__signature">
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-info">25 лет, водитель трамвая</p>
+              </div>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
-            <button class="reviews__prev" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="reviews__next" type="button">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
           </div>
           <p class="reviews__toggles slider__toggles">
             <button class="slider__toggle slider__toggle--current" type="button">1</button>
@@ -142,7 +137,7 @@
                 <b class="table-tariffs__title">База</b>
                 <p class="table-tariffs__price">1.99 USD</p>
               </th>
-              <th class="table-tariffs__header table-tariffs__header--popular slider__item">
+              <th class="table-tariffs__header table-tariffs__header--popular slider__item slider__item--current">
                 <b class="table-tariffs__title">Стандарт</b>
                 <p class="table-tariffs__price">3.99 USD</p>
               </th>
@@ -201,7 +196,7 @@
 
       <section class="contacts">
         <div class="contacts__wrapper wrapper">
-          <h2 class="contacts__title title">Остались вопросы? Свяжитесь с нами!</h2>
+          <h2 class="contacts__title title">Остались вопросы?<br>Свяжитесь с нами!</h2>
           <p class="contacts__type">Звоните:
             <a class="contacts__type-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </p>
@@ -209,11 +204,8 @@
             <a class="contacts__type-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <address class="contacts__type">Приезжайте в гости:
-            <p class="contacts__type-text">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__type-text">ул. Большая<br>Конюшенная, 19/8</p>
           </address>
-        </div>
-        <div class="contacts__map">
-          <img class="contacts__map-image" src="img/map.png" alt="Карта с адресом компании.">
         </div>
       </section>
 
