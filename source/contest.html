@@ -53,8 +53,8 @@
             <h1 class="contest__intro-title intro__title title">Конкурс на самое безбашенное путешествие с Пинк</h1>
           </div>
         </div>
-        <div class="intro__wrapper wrapper">
-          <div class="intro__bottom-contest">
+        <div class="intro__bottom-contest">
+          <div class="intro__wrapper wrapper wrapper">
             <p class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
           </div>
         </div>
@@ -68,7 +68,7 @@
             </div>
             <div class="form__input-text-item">
               <label class="form__input-label" for="last-name">Имя:</label>
-              <input class="form__input-text" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+              <input class="form__input-text" type="text" id="last-name" name="last-name" placeholder="Введите ваше имя *" required>
             </div>
             <div class="form__input-text-item">
               <label class="form__input-label" for="patronymic-name">Отчество:</label>
@@ -122,13 +122,15 @@
         <fieldset class="form__person-contacts form__fieldset form__fieldset--no-border text-input-group">
           <div class="wrapper">
             <h2 class="form__group-title title">Контактная информация</h2>
-            <div class="form__input-text-item">
-              <label class="form__input-label" for="phone">Номер телефона</label>
-              <input class="form__input-text" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
-            </div>
-            <div class="form__input-text-item">
-              <label class="form__input-label" for="email">Адрес почты</label>
-              <input class="form__input-text" type="email" id="email" name="email" placeholder="Введите почту *" required>
+            <div class="text-input-group__wrapper">
+              <div class="form__input-text-item">
+                <label class="form__input-label" for="phone">Номер телефона</label>
+                <input class="form__input-text" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="form__input-text-item">
+                <label class="form__input-label" for="email">Адрес почты</label>
+                <input class="form__input-text" type="email" id="email" name="email" placeholder="Введите почту *" required>
+              </div>
             </div>
           </div>
         </fieldset>
@@ -159,14 +161,14 @@
           </div>
         </fieldset>
 
+        <div class="wrapper">
         <fieldset class="form__emotions form__fieldset emotions">
-          <div class="wrapper">
             <label class="emotions__label control" for="emotions-text">Опишите свои эмоции</label>
             <textarea class="emotions__text" id="emotions-text" name="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </div>
         </fieldset>
+        </div>
 
-        <div class="wrapper">
+        <div class="wrapper contest__form-submit-wrapper">
           <button class="button button--form contest__form-submit" type="submit">Отправить форму</button>
           <p class="contest__form-legend"><span class="contest__form-legend-star">*</span> — обязательные поля</p>
         </div>
@@ -174,7 +176,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper wrapper">
         <a class="footer__logo logo">
           <svg class="footer__logo-image logo__image" width="59" height="40" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
