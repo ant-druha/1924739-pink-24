@@ -5,16 +5,16 @@
 
   .list-style-default;
 
-  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-rows: repeat(4, min-content);
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content min-content;
+    grid-template-rows: repeat(3, min-content);
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content min-content;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
   }
 }
 
