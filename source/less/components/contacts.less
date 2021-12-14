@@ -2,31 +2,25 @@
   padding-top: 50px;
 
   color: @blue-gray;
+}
 
-  &::after {
-    display: block;
-    width: 320px;
-    height: 200px;
-    margin-right: auto;
-    margin-left: auto;
+.contacts__map {
+  display: block;
+  width: 320px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
 
-    content: "";
-    background-image: url("../../img/map.png");
-    grid-column: 1 / -1;
+  border: none;
 
-    @media (min-width: @tablet-width) {
-      width: 660px;
-      height: 374px;
+  @media (min-width: @tablet-width) {
+    width: 660px;
+    height: 374px;
+  }
 
-      background-image: url("../../img/map-tablet.png");
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 1200px;
-      height: 502px;
-
-      background-image: url("../../img/map-desktop.png");
-    }
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 502px;
   }
 }
 
