@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
@@ -50,11 +51,8 @@
       <h1 class="visually-hidden">PINK - приложение, которое сделает вашу жизнь ярче.</h1>
 
       <section class="index__intro intro">
-        <div class="intro__top intro__top--index">
-          <div class="intro__wrapper wrapper">
-            <h2 class="index__intro-title intro__title title">Взгляните на жизнь иначе!</h2>
-          </div>
-          <img class="intro__top-image" src="img/intro-image-front.png" alt="Рука, держащая телефон с ярким розовым экраном.">
+        <div class="intro__wrapper wrapper">
+          <h2 class="index__intro-title intro__title title">Взгляните на жизнь иначе!</h2>
         </div>
         <div class="intro__bottom-index">
           <div class="intro__wrapper wrapper">
@@ -99,9 +97,10 @@
             </li>
           </ul>
           <section class="info__effect">
-            <h3 class="info__effect-title title">Эффект<br>на 24 часа!</h3>
-            <p class="info__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a href="#" class="info__effect-link">Узнать больше об исследовании</a>
+            <div class="info__effect-content">
+              <h3 class="info__effect-title title">Эффект<br>на 24 часа!</h3>
+              <p class="info__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <a href="#" class="info__effect-link">Узнать больше об исследовании</a></div>
           </section>
         </div>
       </section>
@@ -111,16 +110,12 @@
         <div class="reviews__wrapper wrapper slider">
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__author-info">25 лет, водитель трамвая</p>
+              <div class="reviews__signature">
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-info">25 лет, водитель трамвая</p>
+              </div>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
-            <button class="reviews__prev" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="reviews__next" type="button">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
           </div>
           <p class="reviews__toggles slider__toggles">
             <button class="slider__toggle slider__toggle--current" type="button">1</button>
@@ -135,14 +130,14 @@
 
         <div class="tariffs__wrapper wrapper slider">
           <table class="tariffs__table table-tariffs">
-            <thead class="table-tariffs__header">
+            <thead class="table-tariffs__head">
             <tr class="table-tariffs__row slider__list">
               <th class="table-tariffs__header"></th>
               <th class="table-tariffs__header slider__item">
                 <b class="table-tariffs__title">База</b>
                 <p class="table-tariffs__price">1.99 USD</p>
               </th>
-              <th class="table-tariffs__header table-tariffs__header--popular slider__item">
+              <th class="table-tariffs__header table-tariffs__header--popular slider__item slider__item--current">
                 <b class="table-tariffs__title">Стандарт</b>
                 <p class="table-tariffs__price">3.99 USD</p>
               </th>
@@ -201,7 +196,7 @@
 
       <section class="contacts">
         <div class="contacts__wrapper wrapper">
-          <h2 class="contacts__title title">Остались вопросы? Свяжитесь с нами!</h2>
+          <h2 class="contacts__title title">Остались вопросы?<br>Свяжитесь с нами!</h2>
           <p class="contacts__type">Звоните:
             <a class="contacts__type-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </p>
@@ -209,12 +204,12 @@
             <a class="contacts__type-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <address class="contacts__type">Приезжайте в гости:
-            <p class="contacts__type-text">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__type-text">ул. Большая<br>Конюшенная, 19/8</p>
           </address>
         </div>
-        <div class="contacts__map">
-          <img class="contacts__map-image" src="img/map.png" alt="Карта с адресом компании.">
-        </div>
+        <iframe class="contacts__map" aria-label="Адрес компании: ул. Большая Конюшенная, 19/8." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716153722!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639479318596!5m2!1sru!2sru"
+                allowfullscreen="" loading="lazy">
+        </iframe>
       </section>
 
     </main>
@@ -237,7 +232,7 @@
               d="M55.9384 1.38904C55.9228 1.21262 55.944 1.03487 56.0005 0.867114C56.0571 0.699353 56.1479 0.545245 56.267 0.414596C56.3862 0.283947 56.5311 0.179616 56.6926 0.108238C56.8541 0.0368607 57.0286 0 57.2051 0C57.3815 0 57.5561 0.0368607 57.7176 0.108238C57.8791 0.179616 58.024 0.283947 58.1431 0.414596C58.2623 0.545245 58.353 0.699353 58.4096 0.867114C58.4662 1.03487 58.4874 1.21262 58.4718 1.38904V13.6837L71.2282 0.551443C71.4899 0.279712 71.8455 0.119105 72.2216 0.10273C72.5468 0.115453 72.8548 0.252812 73.0821 0.486531C73.3094 0.72025 73.4388 1.03254 73.4436 1.35912C73.4366 1.52896 73.3961 1.69572 73.3245 1.84975C73.2529 2.00379 73.1516 2.14205 73.0264 2.25655L65.0785 10.1539L73.6523 20.6836C73.8764 20.9441 73.9998 21.2768 74 21.6209C73.9961 21.7933 73.9583 21.9633 73.8887 22.121C73.8191 22.2786 73.719 22.4209 73.5943 22.5395C73.4696 22.6582 73.3228 22.7509 73.1622 22.8123C73.0016 22.8737 72.8305 22.9026 72.6588 22.8973C72.4588 22.8891 72.2639 22.8322 72.0908 22.7314C71.9177 22.6306 71.7716 22.4891 71.6653 22.3189L63.3001 11.859L58.4718 16.7051V21.591C58.4718 21.7573 58.4391 21.922 58.3757 22.0756C58.3123 22.2293 58.2194 22.3689 58.1022 22.4865C57.9851 22.6041 57.846 22.6973 57.6929 22.761C57.5398 22.8246 57.3757 22.8574 57.21 22.8574C57.0443 22.8574 56.8803 22.8246 56.7272 22.761C56.5741 22.6973 56.435 22.6041 56.3179 22.4865C56.2007 22.3689 56.1078 22.2293 56.0443 22.0756C55.9809 21.922 55.9483 21.7573 55.9483 21.591V1.38904H55.9384Z"/>
           </svg>
         </a>
-        <ul class="footer__social-list social">
+        <ul class="social">
           <li class="social__item">
             <a href="#" class="social__link social__link--twitter" aria-label="Мы в Твиттере"></a>
           </li>

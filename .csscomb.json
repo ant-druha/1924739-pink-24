@@ -15,6 +15,9 @@
   "unitless-zero": true,
   "sort-order": [
     [
+      "$include"
+    ],
+    [
       "position",
       "top",
       "right",
@@ -69,9 +72,6 @@
     ],
     [
       "will-change"
-    ],
-    [
-      "$include"
     ],
     [
       "$include media"

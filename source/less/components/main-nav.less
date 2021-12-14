@@ -1,9 +1,17 @@
 .main-nav__list {
-  display: none;
-  margin: 0;
-  padding: 0;
-
   .list-style-default;
+
+  display: none;
+
+  column-gap: 59px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  display: block;
 }
 
 .main-nav__toggle {
@@ -14,9 +22,16 @@
   border: none;
 
   background: url("../../img/main-nav-toggle-btn.svg") no-repeat center;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__link {
+  display: block;
+  padding: 7px 10px;
+
   font-style: inherit;
   font-size: 18px;
   line-height: 1;

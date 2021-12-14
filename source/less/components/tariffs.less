@@ -2,8 +2,18 @@
   padding-top: 83px;
 }
 
+.tariffs__wrapper {
+  width: 100%;
+
+  overflow: auto;
+}
+
 .tariffs__toggles {
   margin: 0;
 
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

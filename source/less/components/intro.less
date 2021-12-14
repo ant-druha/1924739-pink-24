@@ -1,9 +1,34 @@
+.intro {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -66px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    content: "";
+    background: url("../../img/back-mobile.jpg") top @blue-gray;
+    background-size: cover;
+
+    @media (min-width: @tablet-width) {
+      top: -110px;
+    }
+  }
+}
+
 .intro__wrapper {
   text-align: center;
+
+  @media (max-width: @tablet-width) {
+    .wrapper--sm();
+  }
 }
 
 .intro__title {
-  display: block;
+  display: inline-block;
 
   font-style: normal;
   font-size: 24px;
@@ -16,23 +41,6 @@
 
   text-align: center;
   color: #ffffff;
-
-  &::before {
-    position: absolute;
-    top: -66px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-
-    content: "";
-    background: url("../../img/back-mobile.jpg") @blue-gray;
-    background-size: cover;
-  }
-
-  &--index {
-    padding-top: 29px;
-  }
 
   &--contest {
     padding-top: 36px;
@@ -58,6 +66,13 @@
   color: #ffffff;
 
   background-color: #1d2631;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 }
 
 .intro__bottom-contest {
@@ -83,10 +98,9 @@
 }
 
 .intro__store-list {
-  margin: 0 0 31px;
-  padding: 0;
-
   .list-style-default;
+
+  margin: 0 0 31px;
 }
 
 .intro__store-item {

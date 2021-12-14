@@ -15,6 +15,7 @@
 }
 
 .emotions__text {
+  width: 100%;
   min-height: 197px;
   padding: 22px 20px;
 
@@ -26,9 +27,16 @@
   border-radius: 1px;
 
   outline: 2px solid @light-grey2;
-  //margin-bottom: 52px;
 
   &::placeholder {
     color: @blue-gray;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 496px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 816px;
   }
 }

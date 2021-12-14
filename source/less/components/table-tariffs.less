@@ -1,7 +1,20 @@
+.table-tariffs__row {
+  display: flex;
+}
+
 .table-tariffs__header {
+  position: relative;
+
+  min-width: @mobile-width;
+  //todo: when adding min-width - horizontal scroll appears for entire page
+  // if set container ('table-tariffs__row' class) to flex - scroll will disappear
+
   color: #ffffff;
 
   background-color: @blue-gray;
+
+  //min-width: 320px;
+  //left: -320px;
 }
 
 .table-tariffs__title {

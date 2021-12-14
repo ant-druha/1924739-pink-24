@@ -19,7 +19,30 @@
 }
 
 .info__effect {
+  display: none;
   padding-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.info__effect::before {
+  position: relative;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 238px;
+  min-height: 276px;
+  padding-top: 31px;
+
+  font-size: 96px;
+  font-weight: bold;
+  color: @pinky-red;
+
+  content: "24";
+  background: url("../../img/timer.svg") center no-repeat;
 }
 
 .info__effect-title {

@@ -4,13 +4,20 @@
   text-align: center;
 }
 
-.footer__logo {
-  margin-bottom: 41px;
+.footer__wrapper {
+  display: flex;
+
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+
+    flex-direction: row;
+  }
 }
 
-.footer__social-list {
-  margin: 0 0 41px;
-  padding: 0;
+.footer__logo {
+  margin-bottom: 41px;
 }
 
 .footer__logo-image {
