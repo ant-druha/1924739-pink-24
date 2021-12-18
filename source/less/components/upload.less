@@ -6,7 +6,7 @@
 
   grid-template-rows: repeat(3, min-content);
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -30,7 +30,7 @@
 
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     grid-column: 1 / 2;
     grid-row: 2 / -1;
   }
@@ -50,13 +50,13 @@
 .upload__controls {
   margin-bottom: 73px;
 
-  @media (max-width: @tablet-width) {
+  @media (max-width: @width-md) {
     .wrapper--sm();
 
     margin-bottom: 73px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     grid-column: 2 / 3;
   }
 }
@@ -72,15 +72,15 @@
 
   flex-direction: column;
 
-  @media (max-width: @desktop-width) {
+  @media (max-width: @width-lg) {
     .wrapper--sm();
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     grid-column: 2 / 3;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     align-items: center;
 
     flex-direction: row;
@@ -103,20 +103,20 @@
   border-radius: 30px;
 
   &:not(:last-of-type) {
-    @media (max-width: @tablet-width) {
+    @media (max-width: @width-md) {
       margin-bottom: 12px;
     }
 
-    @media (max-width: @desktop-width) {
+    @media (max-width: @width-lg) {
       margin-bottom: 24px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @width-lg) {
       margin-right: 44px;
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     width: 183px;
   }
 }

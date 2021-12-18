@@ -7,12 +7,12 @@
 
   grid-template-rows: repeat(4, min-content);
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, min-content);
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, min-content);
   }
@@ -30,7 +30,7 @@
   background: url("../../img/effect-friends.png") top no-repeat;
   grid-row: -2 / -1;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     width: 268px;
     height: 447px;
     margin-top: 0;
@@ -40,7 +40,7 @@
     background: url("../../img/effect-friends-tablet.png") top no-repeat;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     display: none;
   }
 }
@@ -52,7 +52,7 @@
     margin-bottom: 43px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     margin-left: 20px;
 
     text-align: left;
@@ -60,7 +60,7 @@
     grid-column: 2 / 3;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     text-align: center;
 
     grid-row: 2 / 3;
@@ -76,7 +76,7 @@
 
     grid-row: 1 / 2;
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @width-lg) {
       content: "";
     }
   }
@@ -106,7 +106,7 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 49.8%, rgba(0, 0, 0, 0) 93.23%);
     filter: blur(4px);
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @width-lg) {
       content: "";
     }
   }
@@ -121,19 +121,19 @@
 }
 
 .list-info__item--mood::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     background: url("../../img/effect-mood-lg.png") top no-repeat;
   }
 }
 
 .list-info__item--change::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     background: url("../../img/effect-change-lg.png") top no-repeat;
   }
 }
 
 .list-info__item--friends::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     background: url("../../img/effect-friends-lg.png") top no-repeat;
   }
 }

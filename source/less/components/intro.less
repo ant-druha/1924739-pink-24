@@ -13,8 +13,8 @@
     background: url("../../img/back-mobile.jpg") top @blue-gray;
     background-size: cover;
 
-    @media (min-width: @tablet-width) {
-      top: -110px;
+    @media (min-width: @width-md) {
+      top: -@height-header-md;
     }
   }
 }
@@ -22,7 +22,7 @@
 .intro__wrapper {
   text-align: center;
 
-  @media (max-width: @tablet-width) {
+  @media (max-width: @width-md) {
     .wrapper--sm();
   }
 }
@@ -67,7 +67,7 @@
 
   background-color: #1d2631;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     background-color: transparent;
 
     grid-column: 1 / 2;

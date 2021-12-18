@@ -1,12 +1,12 @@
 .wrapper {
   .wrapper--sm();
 
-  @media (min-width: @tablet-width) {
-    max-width: @tablet-width;
+  @media (min-width: @width-md) {
+    max-width: @width-md;
   }
 
-  @media (min-width: @desktop-width) {
-    max-width: @desktop-width;
+  @media (min-width: @width-lg) {
+    max-width: @width-lg;
     padding-right: @padding-lg;
     padding-left: @padding-lg;
   }
@@ -14,7 +14,7 @@
 
 .wrapper--sm() {
   width: 100%;
-  max-width: @mobile-width;
+  max-width: @width-sm;
   margin: 0 auto;
   padding-right: @padding-sm;
   padding-left: @padding-sm;

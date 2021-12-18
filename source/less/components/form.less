@@ -3,7 +3,7 @@
 
   flex-direction: column;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -30,7 +30,7 @@
 
   order: -4;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     order: -8;
   }
 }
@@ -39,7 +39,7 @@
   order: -6;
 
   .form__input-label {
-    @media (min-width: @tablet-width) {
+    @media (min-width: @width-md) {
       order: 2;
     }
   }
@@ -47,17 +47,17 @@
   .form__group-title {
     display: none;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @width-md) {
       display: block;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @width-lg) {
       flex: 0 0 100%;
     }
   }
 
   .form__input-text-item {
-    @media (min-width: @desktop-width) {
+    @media (min-width: @width-lg) {
       flex: 1 1 auto;
     }
   }
@@ -68,18 +68,18 @@
     flex-direction: column;
     flex-wrap: wrap;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @width-md) {
       padding-right: 60px;
       padding-left: 60px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @width-lg) {
       flex-direction: row;
       column-gap: 74px;
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     flex: 0 0 100%;
   }
 }
@@ -87,11 +87,11 @@
 .form__achievements {
   order: -8;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     order: -4;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     flex: 0 0 100%;
   }
 }
@@ -102,7 +102,7 @@
   order: -10;
 
   .form__input-text-item {
-    @media (min-width: @tablet-width) {
+    @media (min-width: @width-md) {
       margin-top: 2px;
 
       flex-direction: row;
@@ -110,7 +110,7 @@
   }
 
   .form__input-label {
-    @media (min-width: @tablet-width) {
+    @media (min-width: @width-md) {
       margin-right: 20px;
     }
   }
