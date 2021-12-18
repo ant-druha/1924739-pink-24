@@ -20,6 +20,9 @@
   }
 
   &--download {
+    width: 100%;
+    max-width: 300px;
+
     font-size: 18px;
     line-height: 1;
     font-weight: bold;
@@ -29,5 +32,15 @@
     border-radius: 29px;
 
     text-decoration: none;
+
+    &:hover {
+      color: @pinky-red;
+
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: fade(@pinky-red, 30%);
+    }
   }
 }

@@ -134,8 +134,8 @@
 .main-nav__link {
   display: block;
   min-height: 63px;
-  padding-top: 16px;
-  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 14px;
 
   font-style: inherit;
   font-size: 18px;
@@ -146,6 +146,18 @@
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid #000000;
   text-decoration: none;
+
+  &:not(.main-nav__link--current):hover {
+    color: @pinky-red;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    @media (min-width: @width-md) {
+      color: #ffffff;
+    }
+  }
 
   @media (min-width: @width-lg) {
     min-height: unset;
