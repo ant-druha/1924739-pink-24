@@ -1,5 +1,45 @@
 .social {
   .list-style-default;
 
+  display: flex;
   margin: 0 0 41px;
+
+  flex-wrap: wrap;
+  column-gap: 8px;
+}
+
+.social__link {
+  position: relative;
+
+  display: block;
+  width: 54px;
+  height: 54px;
+
+  border: 3px solid fade(@blue-gray, 10%);
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--twitter {
+    background-image: url("../../img/twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../../img/facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../../img/youtube.svg");
+  }
+
+  &:hover {
+    border-color: @blue-gray;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    border-color: fade(@blue-gray, 40%);
+  }
 }
