@@ -166,4 +166,13 @@
   &::placeholder {
     color: @blue-gray;
   }
+
+  &:hover {
+    outline-color: @blue-gray;
+  }
+
+  &:active,
+  &:not(:placeholder-shown) {
+    outline-color: @pinky-red;
+  }
 }

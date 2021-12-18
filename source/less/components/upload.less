@@ -88,12 +88,6 @@
 }
 
 .upload__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 280px;
-  padding: 15.5px 0;
-
   font-size: 18px;
   line-height: 1;
   font-weight: bold;
@@ -101,6 +95,16 @@
 
   border: 3px solid @pinky-red;
   border-radius: 30px;
+
+  &:hover {
+    color: #ffffff;
+
+    background-color: @pinky-red;
+  }
+
+  &:active {
+    color: fade(#ffffff, 30%);
+  }
 
   &:not(:last-of-type) {
     @media (max-width: @width-md) {
@@ -116,15 +120,28 @@
     }
   }
 
+  &--reset {
+    color: @blue-gray;
+
+    opacity: 0.1;
+
+    border-color: @blue-gray;
+
+    &:hover {
+      color: @blue-gray;
+
+      background-color: @light-grey2;
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: fade(#ffffff, 30%);
+
+      background-color: @blue-gray;
+    }
+  }
+
   @media (min-width: @width-lg) {
     width: 183px;
   }
-}
-
-.upload-reset {
-  color: @blue-gray;
-
-  opacity: 0.1;
-
-  border-color: @blue-gray;
 }

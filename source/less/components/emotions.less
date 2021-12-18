@@ -4,7 +4,7 @@
 
 .emotions__label {
   display: block;
-  margin-bottom: 22px;
+  padding-bottom: 22px;
 
   font-size: 14px;
   line-height: 1.29;
@@ -30,6 +30,15 @@
 
   &::placeholder {
     color: @blue-gray;
+  }
+
+  &:hover {
+    outline-color: @blue-gray;
+  }
+
+  &:active,
+  &:not(:placeholder-shown) {
+    outline-color: @pinky-red;
   }
 
   @media (min-width: @width-md) {
