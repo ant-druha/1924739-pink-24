@@ -3,7 +3,7 @@
 
   &::before {
     position: absolute;
-    top: -66px;
+    top: -@height-header-sm;
     right: 0;
     bottom: 0;
     left: 0;
@@ -17,6 +17,10 @@
       top: -@height-header-md;
     }
   }
+}
+
+.main-nav--opened + main .intro {
+  margin-top: @height-header-sm - @height-header-sm--opened;
 }
 
 .intro__wrapper {
