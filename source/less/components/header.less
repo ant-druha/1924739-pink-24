@@ -21,6 +21,7 @@
     }
   }
 
+  &.main-nav--nojs,
   &.main-nav--opened {
     @media (max-width: @width-lg-only) {
       background-color: @blue-gray;
@@ -66,6 +67,17 @@
   line-height: 0;
 
   grid-column: 1 / -1;
+
+  @media (max-width: @width-lg-only) {
+    position: absolute;
+    top: @height-header-sm--opened;
+    right: 0;
+    left: 0;
+  }
+
+  @media (min-width: @width-md) {
+    top: @height-header-md;
+  }
 
   @media (min-width: @width-lg) {
     margin-bottom: @margin-bottom-header-md;
