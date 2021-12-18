@@ -19,8 +19,10 @@
   }
 }
 
-.main-nav--opened + main .intro {
-  margin-top: @height-header-sm - @height-header-sm--opened;
+@media (max-width: @width-md) {
+  .main-nav--opened + main .intro {
+    margin-top: @height-header-sm - @height-header-sm--opened;
+  }
 }
 
 .intro__wrapper {
