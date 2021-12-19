@@ -42,6 +42,11 @@
   width: 100%;
 
   text-align: center;
+
+  @media (min-width: @width-lg) {
+    display: inline-flex;
+    justify-content: center;
+  }
 }
 
 .main-nav__toggle {
@@ -167,5 +172,24 @@
     font-weight: normal;
 
     border: none;
+  }
+}
+
+@media (min-width: @width-lg) {
+  .main-nav__link--current {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      right: 8px;
+      bottom: -6px;
+      left: 8px;
+
+      height: 2px;
+
+      background-color: #ffffff;
+
+      content: "";
+    }
   }
 }
