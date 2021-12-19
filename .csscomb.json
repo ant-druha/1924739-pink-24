@@ -15,6 +15,9 @@
   "unitless-zero": true,
   "sort-order": [
     [
+      "$variable"
+    ],
+    [
       "$include"
     ],
     [
