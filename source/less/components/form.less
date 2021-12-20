@@ -15,6 +15,46 @@
   padding: 42px 0 44px;
 
   border: none;
+
+  @media (min-width: @width-md) {
+    &:not(.form__fieldset--no-border) .wrapper {
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      padding-bottom: 61px;
+
+      @media (min-width: @width-md) {
+        &::before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+
+          border: 2px solid @light-grey;
+          border-radius: 1px;
+
+          content: "";
+        }
+      }
+
+      .form__group-title {
+        display: inline-block;
+        align-self: center;
+        width: fit-content;
+        padding-right: 31px;
+        padding-left: 31px;
+
+        background-color: #ffffff;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
 
 .form__emotions {
@@ -117,6 +157,7 @@
 }
 
 .form__group-title {
+  //display: inline-block;
   margin-bottom: 44px;
 
   font-size: 14px;
