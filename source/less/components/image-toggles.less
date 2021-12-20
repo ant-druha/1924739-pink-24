@@ -1,0 +1,28 @@
+.image-toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  column-gap: 35px;
+
+  @media (min-width: @width-md) {
+    display: grid;
+
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.image-toggles__button {
+  position: relative;
+
+  background-color: transparent;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &.slider__toggle--current {
+    opacity: 1;
+
+    fill: @pinky-red;
+  }
+}

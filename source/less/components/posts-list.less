@@ -2,12 +2,12 @@
   display: grid;
 
   @media (min-width: @width-md) {
-    grid-template-columns: 20px 1fr 1fr 20px;
-    gap: 20px;
+    grid-template-columns: 20px 1fr 20px 1fr 20px;
+    row-gap: 20px;
   }
 
   @media (min-width: @width-lg) {
-    grid-template-columns: @padding-lg repeat(3, 1fr) @padding-lg;
+    grid-template-columns: auto @padding-lg repeat(2, 300px 20px) 300px @padding-lg auto;
     row-gap: 54px;
   }
 }
