@@ -1,5 +1,59 @@
+.control {
+  display: block;
+}
+
 .control__label {
+  position: relative;
+
+  display: block;
+
   font-size: 18px;
   line-height: 1.67;
   color: @blue-gray;
+}
+
+.control__input + .control__label::before {
+  position: absolute;
+  top: 0;
+
+  background-color: #ffffff;
+  border: 2px solid @light-grey;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.control__input[type="checkbox"] + .control__label::before {
+  left: -56px;
+
+  width: 39px;
+  height: 39px;
+
+  border-radius: 1px;
+}
+
+.control__input[type="radio"] + .control__label::before {
+  left: -72px;
+
+  width: 41px;
+  height: 41px;
+
+  border-radius: 50%;
+}
+
+.control__input[type="checkbox"]:checked + .control__label::before {
+  background-image: url("../../img/tick.svg");
+}
+
+.control__input[type="radio"]:checked + .control__label::before {
+  background-image: url("../../img/ellipse-small.svg");
+}
+
+.control__label:hover::before {
+  border-color: @blue-gray;
+}
+
+.control__label:active::before {
+  border-color: @pinky-red;
 }
