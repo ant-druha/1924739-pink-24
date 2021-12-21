@@ -1,10 +1,6 @@
 .wrapper {
   .wrapper--sm();
 
-  @media (min-width: @width-md) {
-    max-width: @width-md;
-  }
-
   @media (min-width: @width-lg) {
     max-width: @width-lg;
     padding-right: @padding-lg;
@@ -14,8 +10,22 @@
 
 .wrapper--sm() {
   width: 100%;
-  max-width: @width-sm;
   margin: 0 auto;
   padding-right: @padding-sm;
   padding-left: @padding-sm;
+}
+
+.wrapper--stretched(@margin: @padding-sm) {
+  margin-right: -@margin;
+  margin-left: -@margin;
+}
+
+.wrapper--stretched() {
+  margin-right: -@padding-sm;
+  margin-left: -@padding-sm;
+
+  @media (min-width: @width-lg) {
+    margin-right: -@padding-lg;
+    margin-left: -@padding-lg;
+  }
 }
