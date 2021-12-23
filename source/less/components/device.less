@@ -1,6 +1,13 @@
 .device {
   .paddings-h(@padding-sm);
 
+  padding-top: 42px;
+  padding-bottom: 42px;
+
+  @media (min-width: @width-md) {
+    padding-top: 0;
+  }
+
   @media (max-width: @width-md-only) {
     background-color: @light-grey2;
   }

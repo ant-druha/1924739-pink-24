@@ -1,8 +1,13 @@
 .emotions {
   display: flex;
   align-items: center;
+  padding-top: 42px;
 
   flex-direction: column;
+
+  @media (min-width: @width-md) {
+    padding-top: 0;
+  }
 }
 
 .emotions__title {
@@ -11,7 +16,6 @@
 
 .emotions__label {
   display: block;
-  padding-bottom: 22px;
 
   font-size: 14px;
   line-height: 1.29;
