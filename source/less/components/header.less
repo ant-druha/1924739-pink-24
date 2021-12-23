@@ -26,12 +26,6 @@
     @media (max-width: @width-lg-only) {
       background-color: @blue-gray;
     }
-
-    .wrapper {
-      @media (max-width: @width-md) {
-        grid-template-rows: minmax(@height-header-sm--opened, min-content) min-content;
-      }
-    }
   }
 }
 
@@ -70,7 +64,7 @@
 
   @media (max-width: @width-lg-only) {
     position: absolute;
-    top: @height-header-sm--opened;
+    top: @height-header-sm;
     right: 0;
     left: 0;
   }
