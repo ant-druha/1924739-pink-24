@@ -28,15 +28,10 @@
   flex-direction: column;
 
   @media (min-width: @width-lg) {
-    display: block;
-
-    //todo cannot make columns width positioning to fit PP, bt browser makes all columns equal width
-    column-count: 3;
-    //column-gap: 50px;
-    //max-height: 228px;
-
-    //flex-direction: column;
-    //flex-wrap: wrap;
+    max-height: 228px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
   }
 }
 
