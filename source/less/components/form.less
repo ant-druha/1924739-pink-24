@@ -17,6 +17,7 @@
 }
 
 .form__fieldset {
+  margin: 0;
   padding: 0;
 
   border: none;
@@ -284,17 +285,14 @@
 .form__input-text {
   display: block;
   width: 100%;
-  margin: 2px;
-  padding: 23px 0 23px 20px;
+  padding: 21px 0 21px 18px;
 
   font-size: 18px;
   line-height: 1.67;
   color: @blue-gray;
 
-  border: none;
+  border: 2px solid @light-grey;
   border-radius: 1px;
-
-  outline: 2px solid @light-grey;
 
   &::placeholder {
     color: @blue-gray;
