@@ -25,22 +25,32 @@
   content: "";
 }
 
-.control__input[type="checkbox"] + .control__label::before {
-  left: -59px;
-
-  width: 39px;
+.control__input[type="checkbox"] + .control__label {
   height: 39px;
+  margin-left: 59px;
 
-  border-radius: 1px;
+  &::before {
+    left: -59px;
+
+    width: 39px;
+    height: 100%;
+
+    border-radius: 1px;
+  }
 }
 
-.control__input[type="radio"] + .control__label::before {
-  left: -72px;
-
-  width: 41px;
+.control__input[type="radio"] + .control__label {
   height: 41px;
+  margin-left: 72px;
 
-  border-radius: 50%;
+  &::before {
+    left: -72px;
+
+    width: 41px;
+    height: 100%;
+
+    border-radius: 50%;
+  }
 }
 
 .control__input[type="checkbox"]:checked + .control__label::before {

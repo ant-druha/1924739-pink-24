@@ -39,11 +39,7 @@
 }
 
 .achievements__item {
-  margin: 6px 0;
-  width: max-content;
-}
-
-.achievements__label {
-  // same as .control__label::before check-mark left position
-  padding-left: 56px;
+  @media (min-width: @width-lg) {
+    width: max-content;
+  }
 }
