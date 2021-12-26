@@ -14,18 +14,19 @@
 
 .control__input + .control__label::before {
   position: absolute;
-  top: 0;
+  top: 50%;
 
   background-color: #ffffff;
   border: 2px solid @light-grey;
 
+  transform: translateY(-50%);
   background-position: center;
   background-repeat: no-repeat;
   content: "";
 }
 
 .control__input[type="checkbox"] + .control__label::before {
-  left: -56px;
+  left: -59px;
 
   width: 39px;
   height: 39px;
@@ -50,7 +51,11 @@
   background-image: url("../../img/ellipse-small.svg");
 }
 
-.control__label:hover::before {
+.control:hover {
+  cursor: pointer;
+}
+
+.control:hover .control__label::before {
   border-color: @blue-gray;
 }
 

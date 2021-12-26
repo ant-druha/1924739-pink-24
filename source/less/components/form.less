@@ -193,6 +193,53 @@
   color: @pinky-red;
 
   text-transform: uppercase;
+
+  &--achievements {
+    @media (min-width: @width-md) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &--device {
+    @media (min-width: @width-md) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @width-md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--emotions {
+    @margin-bt: 22px;
+
+    position: relative;
+
+    margin-bottom: @margin-bt;
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      width: 100%;
+      height: calc(~"50% + @{margin-bt}");
+
+      content: "";
+    }
+
+    @media (min-width: @width-md) {
+      @margin-bt: 28px;
+
+      margin-bottom: @margin-bt;
+
+      &::after {
+        height: calc(~"50% + @{margin-bt}");
+      }
+    }
+  }
 }
 
 .form__input-text-item {
@@ -207,8 +254,8 @@
 
 .form__input-label {
   display: block;
-  margin-bottom: 17px;
-  margin-left: 23px;
+  padding-bottom: 17px;
+  padding-left: 23px;
 
   font-size: 14px;
   line-height: 2.14;
@@ -222,14 +269,14 @@
 
   &--name {
     @media (min-width: @width-md) {
-      margin-right: 20px;
+      padding-right: 20px;
     }
   }
 
   &--contacts {
     @media (min-width: @width-md) {
-      margin-top: 22px;
-      margin-left: 20px;
+      padding-top: 22px;
+      padding-left: 20px;
     }
   }
 }
