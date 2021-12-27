@@ -7,6 +7,8 @@
 
   cursor: pointer;
 
+  transition: color @transition-settings, background-color @transition-settings, opacity @transition-settings;
+
   &--form {
     font-size: 18px;
     line-height: 1.67;
@@ -17,9 +19,28 @@
     background-color: @light-green;
     border: 2px solid @light-green;
     border-radius: 1px;
+
+    &:hover {
+      background-color: @light-green2;
+
+      border-color: @light-green2;
+    }
+
+    &:active {
+      color: fade(#ffffff, 30%);
+    }
+  }
+
+  &--form[disabled] {
+    background-color: @light-grey;
+
+    border-color: @light-grey;
   }
 
   &--download {
+    width: 100%;
+    max-width: 300px;
+
     font-size: 18px;
     line-height: 1;
     font-weight: bold;
@@ -29,5 +50,15 @@
     border-radius: 29px;
 
     text-decoration: none;
+
+    &:hover {
+      color: @pinky-red;
+
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: fade(@pinky-red, 30%);
+    }
   }
 }

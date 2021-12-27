@@ -5,27 +5,16 @@
   flex-direction: column;
 
   &--featured {
+    .wrapper--stretched;
+
     grid-column: 1 / -1;
-  }
-}
-
-
-.post-item--featured ~ .post-item:nth-of-type(2n) {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    grid-column: 2 / 3;
-  }
-}
-
-.post-item--featured ~ .post-item:nth-of-type(3n - 1) {
-  @media (min-width: @desktop-width) {
-    grid-column: 2 / 3;
   }
 }
 
 .post-item__image {
   display: inline-block;
   width: 100%;
-  max-width: @desktop-width;
+  max-width: @width-lg;
   height: auto;
 
   vertical-align: top;

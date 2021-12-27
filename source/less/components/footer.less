@@ -6,10 +6,11 @@
 
 .footer__wrapper {
   display: flex;
+  align-items: center;
 
   flex-direction: column;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     justify-content: space-between;
 
     flex-direction: row;
@@ -28,6 +29,14 @@
 
 .footer__logo-text {
   fill: @blue-gray;
+
+  &:hover {
+    fill: @pinky-red;
+  }
+
+  &:active {
+    fill: @blue-gray;
+  }
 }
 
 .footer__copyright {

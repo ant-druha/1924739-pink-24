@@ -1,10 +1,21 @@
+.emotions {
+  display: flex;
+  align-items: center;
+  padding-top: 42px;
+
+  flex-direction: column;
+
+  @media (min-width: @width-md) {
+    padding-top: 0;
+  }
+}
+
 .emotions__title {
   margin-bottom: 22px;
 }
 
 .emotions__label {
   display: block;
-  margin-bottom: 22px;
 
   font-size: 14px;
   line-height: 1.29;
@@ -32,11 +43,20 @@
     color: @blue-gray;
   }
 
-  @media (min-width: @tablet-width) {
+  &:hover {
+    outline-color: @blue-gray;
+  }
+
+  &:active,
+  &:not(:placeholder-shown) {
+    outline-color: @pinky-red;
+  }
+
+  @media (min-width: @width-md) {
     max-width: 496px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     max-width: 816px;
   }
 }

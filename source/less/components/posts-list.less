@@ -1,22 +1,17 @@
 .posts-list {
   display: grid;
 
-  @media (min-width: @tablet-width) {
-    grid-template-columns: 20px 1fr 1fr 20px;
+  @media (min-width: @width-md) {
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
-  @media (min-width: @desktop-width) {
-    grid-template-columns: @padding-lg repeat(3, 1fr) @padding-lg;
-    row-gap: 54px;
-  }
-}
+  @media (min-width: @width-lg) {
+    max-width: 940px;
+    padding-right: 0;
+    padding-left: 0;
 
-.posts-list__item {
-  &.wrapper {
-    @media (min-width: @tablet-width) {
-      margin: 0;
-      padding: 0;
-    }
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 54px;
   }
 }

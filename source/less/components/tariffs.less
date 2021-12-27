@@ -1,5 +1,35 @@
 .tariffs {
-  padding-top: 83px;
+  position: relative;
+
+  margin-top: 139px;
+  padding-bottom: 46px;
+
+  @media (min-width: @width-md) {
+    margin-top: 139px;
+  }
+
+  @media (min-width: @width-md) {
+    margin-top: 200px;
+  }
+
+  &::before {
+    background: @bg-gradient-light-grey2;
+
+    position: absolute;
+    top: -155px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    content: "";
+
+    @media (min-width: @width-lg) {
+      .bg-gradient-lg;
+
+      top: -157px - @gradient-grey-shift-lg;
+    }
+  }
 }
 
 .tariffs__wrapper {
@@ -13,7 +43,7 @@
 
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     display: none;
   }
 }

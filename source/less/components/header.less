@@ -1,37 +1,81 @@
 .header {
+  position: relative;
+
   color: #ffffff;
 
   background-color: @header-bg-color;
+
+  .wrapper {
+    position: relative;
+
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: auto auto;
+    grid-template-rows: minmax(@height-header-sm, min-content) min-content;
+
+    @media (min-width: @width-md) {
+      align-items: end;
+
+      grid-template-rows: minmax(@height-header-md, min-content) min-content;
+    }
+  }
+
+  &.header--nojs,
+  &.main-nav--opened {
+    @media (max-width: @width-lg-only) {
+      background-color: @blue-gray;
+    }
+  }
 }
 
 .header__logo {
-  height: 100%;
   //todo: why it has bigger size with non-zero line-height even if there is no text here?
-
   line-height: 0;
+
+  @media (min-width: @width-md) {
+    margin-bottom: @margin-bottom-header-md;
+  }
 }
 
 .header__logo-image {
   display: none;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     display: inline-block;
   }
 }
 
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-top: 21px;
-  padding-bottom: 21px;
+.header__main-nav-toggle {
+  justify-self: end;
 
-  @media (min-width: @tablet-width) {
-    padding-top: 27px;
-    padding-bottom: 43px;
+  @media (min-width: @width-md) {
+    margin-bottom: @margin-bottom-header-md;
   }
 }
 
 .header__main-nav {
   line-height: 0;
+
+  grid-column: 1 / -1;
+
+  @media (max-width: @width-lg-only) {
+    .wrapper--stretched(@padding-sm);
+
+    position: absolute;
+    top: @height-header-sm;
+    right: 0;
+    left: 0;
+  }
+
+  @media (min-width: @width-md) {
+    top: @height-header-md;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-right: -10px;
+    margin-bottom: @margin-bottom-header-md;
+
+    grid-column: 2 / 3;
+  }
 }

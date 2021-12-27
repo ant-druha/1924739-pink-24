@@ -1,0 +1,39 @@
+.store-list {
+  display: flex;
+  max-width: 300px;
+
+  flex-wrap: wrap;
+  column-gap: 35px;
+}
+
+.store-list__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.store-list__link {
+  display: block;
+
+  background-repeat: no-repeat;
+
+  &--apple {
+    width: 47px;
+    height: 56px;
+
+    background-image: url("../../img/apple-logo.svg");
+  }
+
+  &--android {
+    width: 43px;
+    height: 47px;
+
+    background-image: url("../../img/android-logo.svg");
+  }
+
+  &--microsoft {
+    width: 44px;
+    height: 41px;
+
+    background-image: url("../../img/microsoft-logo.svg");
+  }
+}

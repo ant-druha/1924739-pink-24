@@ -15,14 +15,14 @@
 
   background-image: url("../../img/map.png");
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     width: 660px;
     height: 374px;
 
     background-image: url("../../img/map-tablet.png");
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     width: 1200px;
     height: 502px;
 
@@ -31,16 +31,55 @@
 }
 
 .contacts__wrapper {
+  position: relative;
+
   display: grid;
   margin-bottom: 40px;
 
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: -76px;
+
+    width: 600px;
+    height: @gradient-map-height;
+
+    content: "";
+
+    @media (min-width: @width-md) {
+      bottom: -98px;
+    }
+
+    @media (min-width: @width-lg) {
+      bottom: -129px;
+
+      width: 720px;
+    }
+  }
+
+  &::after {
+    left: 50%;
+
+    background: linear-gradient(to left top, transparent @gradient-map-height, #ffffff 0) no-repeat;
+  }
+
+  &::before {
+    right: 50%;
+
+    background: linear-gradient(to right top, transparent @gradient-map-height, #ffffff 0) no-repeat;
+  }
+
+  @media (min-width: @width-md) {
+    margin-bottom: 0;
+
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
+    margin-bottom: 26px;
+
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -52,12 +91,14 @@
   line-height: 1.2;
   font-weight: 300;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     grid-column: 1 / -1;
   }
 }
 
 .contacts__type {
+  z-index: 1;
+
   margin: 0;
 
   font-style: normal;
@@ -66,18 +107,18 @@
   font-weight: bold;
 
   &:not(:last-child) {
-    @media (max-width: @tablet-width) {
+    @media (max-width: @width-md) {
       margin-bottom: 34px;
     }
   }
 }
 
 address.contacts__type {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @width-md) {
     grid-column: 1 / -1;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @width-lg) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
@@ -95,6 +136,16 @@ address.contacts__type {
   display: block;
 
   text-decoration: none;
+
+  &:hover {
+    color: @blue-gray;
+
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__type-text {
