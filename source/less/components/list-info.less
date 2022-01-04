@@ -27,8 +27,15 @@
   margin-left: auto;
 
   content: "";
-  background: url("../../img/effect-friends.png") top no-repeat;
+  background-image: url("../../img/effect-friends-mobile.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
   grid-row: -2 / -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/effect-friends-mobile@2x.png");
+  }
 
   @media (min-width: @width-md) {
     width: 268px;
@@ -37,7 +44,11 @@
     margin-left: 0;
 
     grid-row: 1 / -1;
-    background: url("../../img/effect-friends-tablet.png") top no-repeat;
+    background-image: url("../../img/effect-friends-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/effect-friends-tablet@2x.png");
+    }
   }
 
   @media (min-width: @width-lg) {
@@ -78,6 +89,9 @@
 
     @media (min-width: @width-lg) {
       content: "";
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
     }
   }
 }
@@ -126,18 +140,30 @@
 
 .list-info__item--mood::before {
   @media (min-width: @width-lg) {
-    background: url("../../img/effect-mood-lg.png") top no-repeat;
+    background-image: url("../../img/effect-mood-lg.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/effect-mood-lg@2x.png");
+    }
   }
 }
 
 .list-info__item--change::before {
   @media (min-width: @width-lg) {
-    background: url("../../img/effect-change-lg.png") top no-repeat;
+    background-image: url("../../img/effect-change-lg.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/effect-change-lg@2x.png");
+    }
   }
 }
 
 .list-info__item--friends::before {
   @media (min-width: @width-lg) {
-    background: url("../../img/effect-friends-lg.png") top no-repeat;
+    background-image: url("../../img/effect-friends-lg.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/effect-friends-lg@2x.png");
+    }
   }
 }
