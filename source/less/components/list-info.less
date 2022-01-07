@@ -14,6 +14,7 @@
   @media (min-width: @width-lg) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, min-content);
+    column-gap: 21px;
   }
 }
 
@@ -29,6 +30,7 @@
   background-image: url("../../img/effect-friends-mobile.png");
   background-position: top;
   background-repeat: no-repeat;
+  background-size: cover;
   grid-row: -2 / -1;
 
   @media (min-resolution: 2dppx) {
@@ -105,6 +107,11 @@
   color: #000000;
 
   @media (min-width: @width-lg) {
+    margin-bottom: 21px;
+
+    font-size: 30px;
+    line-height: 1;
+
     background-color: @light-grey2;
   }
 
@@ -125,7 +132,17 @@
     filter: blur(4px);
 
     @media (min-width: @width-lg) {
+      margin-bottom: 40px;
+
       content: "";
+    }
+  }
+}
+
+.list-info__item--friends .list-info__title {
+  @media (max-width: @width-lg-only) {
+    br {
+      display: none;
     }
   }
 }
@@ -136,16 +153,30 @@
 
   font-size: 14px;
   line-height: 1.71;
+
+  @media (min-width: @width-lg) {
+    max-width: 248px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-size: 18px;
+  }
 }
 
 .list-info__item--mood {
-  @media (min-width: @width-md) {
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
     margin-top: 71px;
   }
 }
 
 .list-info__item--change {
   @media (max-width: @width-md-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @width-lg) {
     br {
       display: none;
     }

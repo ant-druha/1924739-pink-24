@@ -24,6 +24,14 @@
       display: none;
     }
   }
+
+  @media (min-width: @width-lg) {
+    padding-top: 63px;
+    padding-bottom: 55px;
+
+    font-size: 50px;
+    line-height: 1.37;
+  }
 }
 
 .info__container {
@@ -92,11 +100,26 @@
 
     content: "24";
     background: url("../../img/timer.svg") center no-repeat;
+
+    @media (min-width: @width-lg) {
+      min-width: 298px;
+      min-height: 345px;
+      padding-top: 42px;
+
+      font-size: 120px;
+      line-height: 1.36;
+
+      background-size: cover;
+    }
   }
 
   @media (min-width: @width-md) {
     display: flex;
     padding-top: 55px;
+  }
+
+  @media (min-width: @width-lg) {
+    padding-top: 30px;
   }
 }
 
@@ -106,6 +129,11 @@
     padding-left: 72px;
 
     text-align: left;
+  }
+
+  @media (min-width: @width-lg) {
+    font-size: 18px;
+    line-height: 1.67;
   }
 }
 
@@ -118,6 +146,15 @@
   @media (min-width: @width-md) {
     margin-bottom: 10px;
   }
+
+  @media (min-width: @width-lg) {
+    margin-top: 50px;
+    margin-bottom: 22px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .info__effect-text {
@@ -129,6 +166,14 @@
 
   @media (min-width: @width-md) {
     margin: 0 0 10px;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-bottom: 30px;
+
+    br {
+      display: none;
+    }
   }
 }
 

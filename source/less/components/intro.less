@@ -47,8 +47,13 @@
     .wrapper--sm();
   }
 
-  @media (min-width: @width-md) {
-    padding: 0;
+  //@media (min-width: @width-md) and (max-width: @width-lg-only) {
+  //  padding: 0;
+  //}
+
+  @media (min-width: @width-lg) {
+    //text-align: left;
+    //padding-left: 120px;
   }
 }
 
@@ -94,12 +99,16 @@
 
   @media (min-width: @width-md) {
     padding-top: 2px;
-    padding-left: 10px;
 
     background-color: transparent;
 
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-top: 6px;
+    padding-left: 0;
   }
 }
 
@@ -127,6 +136,10 @@
   @media (min-width: @width-md) {
     margin-bottom: 46px;
   }
+
+  @media (min-width: @width-lg) {
+    margin-bottom: 70px;
+  }
 }
 
 .intro__store-list {
@@ -139,6 +152,12 @@
   @media (min-width: @width-md) {
     margin-bottom: 33px;
     padding-left: 47px;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-bottom: 50px;
+    margin-left: 47px;
+    padding: 0;
   }
 }
 

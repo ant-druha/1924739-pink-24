@@ -39,6 +39,7 @@
 
   &--download {
     width: 100%;
+    min-width: 280px;
     max-width: 300px;
 
     font-size: 18px;
@@ -59,6 +60,15 @@
 
     &:active {
       color: fade(@pinky-red, 30%);
+    }
+
+    @media (min-width: @width-md) {
+      min-width: 300px;
+    }
+
+    @media (min-width: @width-lg) {
+      font-size: 21px;
+      line-height: 0.86;
     }
   }
 }

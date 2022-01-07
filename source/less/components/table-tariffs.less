@@ -44,6 +44,11 @@
     min-height: 80px;
     padding-top: 13px;
   }
+
+  @media (min-width: @width-lg) {
+    min-width: 234px;
+    min-height: 98px;
+  }
 }
 
 .table-tariffs__body {
@@ -60,6 +65,11 @@
   font-weight: bold;
 
   text-transform: uppercase;
+
+  @media (min-width: @width-lg) {
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 
 .table-tariffs__price {
@@ -68,6 +78,11 @@
   font-size: 18px;
   line-height: 1.67;
   font-weight: 300;
+
+  @media (min-width: @width-lg) {
+    font-size: 24px;
+    line-height: 1.55;
+  }
 }
 
 .table-tariffs__feature-name {
@@ -93,6 +108,16 @@
 
     text-transform: capitalize;
   }
+
+  @media (min-width: @width-lg) {
+    min-width: 234px;
+    min-height: 60px;
+    padding-top: 12px;
+    padding-left: 20px;
+
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 
 .table-tariffs__feature-value {
@@ -113,5 +138,9 @@
 
   @media (min-width: @width-md) and (max-width: @width-lg-only) {
     min-width: 155px;
+  }
+
+  @media (min-width: @width-lg) {
+    min-width: 236px;
   }
 }

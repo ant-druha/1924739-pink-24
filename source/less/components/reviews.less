@@ -9,6 +9,10 @@
     padding-top: 33px;
   }
 
+  @media (min-width: @width-lg) {
+    padding-top: 72px;
+  }
+
   &::before {
     display: inline-block;
     width: 79px;
@@ -22,8 +26,17 @@
   }
 }
 
+.reviews__wrapper {
+  @media (min-width: @width-lg) {
+    margin-top: 40px;
+  }
+}
+
 .slider__list.reviews__list {
+  max-width: 690px;
+  margin-right: auto;
   margin-bottom: 22px;
+  margin-left: auto;
 }
 
 .reviews__item {
@@ -59,6 +72,11 @@
   @media (min-width: @width-md) {
     font-size: 20px;
   }
+
+  @media (min-width: @width-lg) {
+    font-size: 24px;
+    line-height: 1.25;
+  }
 }
 
 .reviews__author-info {
@@ -71,6 +89,11 @@
 
   @media (min-width: @width-md) {
     display: block;
+  }
+
+  @media (min-width: @width-lg) {
+    font-size: 18px;
+    line-height: 1.67;
   }
 }
 
