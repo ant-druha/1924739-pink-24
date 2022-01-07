@@ -9,7 +9,6 @@
 
   @media (min-width: @width-md) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, min-content);
   }
 
   @media (min-width: @width-lg) {
@@ -22,7 +21,7 @@
   display: inline-block;
   width: 157px;
   height: 277px;
-  margin-top: 48px;
+  margin-top: 39px;
   margin-right: auto;
   margin-left: auto;
 
@@ -38,7 +37,7 @@
 
   @media (min-width: @width-md) {
     width: 268px;
-    height: 447px;
+    height: 480px;
     margin-top: 0;
     margin-left: 0;
 
@@ -59,12 +58,14 @@
   z-index: 2;
 
   &:not(:last-child) {
-    margin-bottom: 43px;
+    margin-bottom: 32px;
+
+    @media (min-width: @width-md) {
+      margin-bottom: 34px;
+    }
   }
 
   @media (min-width: @width-md) {
-    margin-left: 20px;
-
     text-align: left;
 
     grid-column: 2 / 3;
@@ -96,7 +97,7 @@
 }
 
 .list-info__title {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 
   font-size: 18px;
   line-height: 1.33;
@@ -135,6 +136,20 @@
 
   font-size: 14px;
   line-height: 1.71;
+}
+
+.list-info__item--mood {
+  @media (min-width: @width-md) {
+    margin-top: 71px;
+  }
+}
+
+.list-info__item--change {
+  @media (max-width: @width-md-only) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .list-info__item--mood::before {

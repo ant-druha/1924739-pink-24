@@ -1,20 +1,57 @@
+.table-tariffs {
+  border-collapse: collapse;
+}
+
 .table-tariffs__row {
   display: flex;
+}
+
+.table-tariffs__header-row {
+  display: flex;
+  height: 100%;
+
+  background-color: transparent;
+
+  align-content: stretch;
 }
 
 .table-tariffs__header {
   position: relative;
 
-  min-width: 320px;
+  display: block;
+  min-width: 280px;
+  min-height: 100px;
+  padding-top: 15px;
   //todo: when adding min-width - horizontal scroll appears for entire page
   // if set container ('table-tariffs__row' class) to flex - scroll will disappear
 
   color: #ffffff;
 
-  background-color: @blue-gray;
+  &:not(:last-of-type) {
+    border-right: 2px solid @light-grey;
+  }
 
-  //min-width: 320px;
-  //left: -320px;
+  &:not(:first-of-type) {
+    background-color: @blue-gray;
+  }
+
+  &.slider__list {
+    padding-top: 11px;
+  }
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    min-width: 155px;
+    min-height: 80px;
+    padding-top: 13px;
+  }
+}
+
+.table-tariffs__body {
+  background-color: #ffffff;
+  border: 2px solid @light-grey;
+
+  border-bottom: none;
+  border-right: none;
 }
 
 .table-tariffs__title {
@@ -26,15 +63,55 @@
 }
 
 .table-tariffs__price {
+  margin: -4px 0 0;
+
   font-size: 18px;
   line-height: 1.67;
   font-weight: 300;
 }
 
 .table-tariffs__feature-name {
+  min-width: 280px;
+  min-height: 61px;
+  padding-top: 14px;
+  padding-left: 19px;
+
   font-size: 14px;
   line-height: 2.14;
   color: @blue-gray;
 
   text-transform: uppercase;
+
+  border-bottom: 2px solid @light-grey;
+  border-right: 2px solid @light-grey;
+
+  @media (min-width: @width-md) {
+    min-width: 154px;
+    min-height: 45px;
+    padding-top: 7px;
+    padding-left: 14px;
+
+    text-transform: capitalize;
+  }
+}
+
+.table-tariffs__feature-value {
+  @media (min-width: @width-md) {
+    min-height: 45px;
+    padding-top: 7px;
+    padding-left: 14px;
+
+    text-transform: capitalize;
+
+    border-bottom: 2px solid @light-grey;
+    border-right: 2px solid @light-grey;
+  }
+}
+
+.table-tariffs__column {
+  min-width: 320px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    min-width: 155px;
+  }
 }

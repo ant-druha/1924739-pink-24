@@ -15,6 +15,7 @@
     .logo__text,
     .logo__image {
       --color-secondary: @pinky-red;
+
       fill: @pinky-red;
     }
   }
@@ -66,6 +67,8 @@
 
 .logo--sm {
   display: inline-block;
+  width: 75px;
+  height: 23px;
 
   @media (min-width: @width-md) {
     display: none;
@@ -74,6 +77,8 @@
 
 .logo--md {
   display: none;
+  width: 145px;
+  height: 40px;
 
   @media (min-width: @width-md) and (max-width: @width-lg) {
     display: inline-block;
@@ -88,6 +93,8 @@
 
 .logo--lg {
   display: none;
+  width: 145px;
+  height: 40px;
 
   @media (min-width: @width-lg) {
     display: inline-block;

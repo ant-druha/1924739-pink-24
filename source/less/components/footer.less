@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 40px;
+  padding-top: 37px;
 
   text-align: center;
 }
@@ -12,13 +12,22 @@
 
   @media (min-width: @width-md) {
     justify-content: space-between;
+    align-items: flex-start;
 
     flex-direction: row;
   }
 }
 
 .footer__logo {
-  margin-bottom: 41px;
+  margin-bottom: 34px;
+}
+
+.social.footer__social {
+  margin-bottom: 39px;
+
+  @media (min-width: @width-md) {
+    margin-left: -13px;
+  }
 }
 
 .footer__logo-image {
@@ -41,4 +50,8 @@
 
 .footer__copyright {
   margin-bottom: 40px;
+
+  @media (min-width: @width-md) {
+    margin-top: 10px;
+  }
 }
