@@ -292,6 +292,8 @@
 
         background-color: @light-grey;
 
+        background-repeat: no-repeat;
+        background-position: center;
         content: "";
       }
     }
@@ -311,7 +313,7 @@
 .form__input-phone {
   @media (min-width: @width-md) {
     &::after {
-      background: url("../../img/phone.svg") no-repeat center;
+      background-image: url("../../img/phone.svg");
     }
   }
 }
@@ -319,7 +321,7 @@
 .form__input-email {
   @media (min-width: @width-md) {
     &::after {
-      background: url("../../img/mail.svg") no-repeat center;
+      background-image: url("../../img/mail.svg");
     }
   }
 }
@@ -366,8 +368,8 @@
 
   border: 2px solid @light-grey;
   border-radius: 1px;
-
   //todo it is not set in the design, but if not set- it does not match PP. Remove?
+
   letter-spacing: 0.02em;
 
   &::placeholder {
