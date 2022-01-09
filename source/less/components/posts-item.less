@@ -11,7 +11,40 @@
   &--featured {
     .wrapper--stretched;
 
+    position: relative;
+
     grid-column: 1 / -1;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: @padding-sm;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      height: 36px;
+
+      font-family: inherit;
+      font-size: 12px;
+      line-height: 2;
+      font-weight: bold;
+      color: #ffffff;
+
+      text-transform: uppercase;
+      background-color: @pinky-red;
+
+      content: "Панорама дня";
+
+      @media (min-width: @width-md) {
+        top: 57px;
+      }
+
+      @media (min-width: @width-lg) {
+        right: @padding-lg;
+      }
+    }
 
     @media (min-width: @width-md) {
       margin-bottom: 30px;
@@ -21,6 +54,10 @@
       margin-bottom: -4px;
     }
   }
+}
+
+.post-item__picture {
+  width: 100%;
 }
 
 .post-item__image {
@@ -101,10 +138,27 @@
 }
 
 .post-item__likes {
-  margin-left: 31px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: block;
+    width: 13px;
+    height: 12px;
+    margin-right: 18px;
+
+    content: "";
+    background: url("../../img/heart.svg");
+
+    @media (min-width: @width-md) {
+      margin-right: 0;
+
+      order: 2;
+    }
+  }
 
   @media (min-width: @width-md) {
-    margin-left: 0;
+    justify-content: space-between;
 
     grid-row: 3 / 4;
     grid-column: 1 / -1;
@@ -119,6 +173,10 @@
   color: @pinky-red;
 
   text-transform: uppercase;
+
+  @media (min-width: @width-md) {
+    padding-right: 16px;
+  }
 }
 
 .post-item__likes-value {

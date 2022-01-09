@@ -279,6 +279,23 @@
   }
 
   &--contacts {
+    @media (min-width: @width-md) {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+
+        width: 59px;
+        height: 59px;
+
+        background-color: @light-grey;
+
+        content: "";
+      }
+    }
+
     &:not(:last-of-type) {
       @media (min-width: @width-md) {
         margin-bottom: 24px;
@@ -287,6 +304,22 @@
       @media (min-width: @width-lg) {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+.form__input-phone {
+  @media (min-width: @width-md) {
+    &::after {
+      background: url("../../img/phone.svg") no-repeat center;
+    }
+  }
+}
+
+.form__input-email {
+  @media (min-width: @width-md) {
+    &::after {
+      background: url("../../img/mail.svg") no-repeat center;
     }
   }
 }
@@ -348,6 +381,12 @@
   &:active,
   &:not(:placeholder-shown) {
     outline-color: @pinky-red;
+  }
+}
+
+.form__person-contacts .form__input-text {
+  @media (min-width: @width-md) {
+    padding-right: 65px;
   }
 }
 
