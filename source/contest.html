@@ -19,7 +19,7 @@
           </svg>
           <svg class="logo--md" width="145" height="40">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-simple" width="59" height="40"></use>
-            <use class="logo__text" x="71" y="5" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
+            <use class="logo__text" x="71" y="18" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
           </svg>
           <svg class="logo--lg" width="147" height="40">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-desktop" width="61" height="40"></use>
@@ -58,7 +58,7 @@
         </div>
         <div class="intro__bottom-contest">
           <div class="intro__wrapper wrapper">
-            <p class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+            <p class="intro__text intro__text--contest">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="intro__text--contest-note">Пожалуйста, заполните форму ниже:</span></p>
           </div>
         </div>
       </section>
@@ -78,7 +78,7 @@
           </div>
         </fieldset>
         <fieldset class="form__achievements form__fieldset achievements">
-          <h2 class="form__group-title form__group-title--achievements title">Ваши безбашенные<br>достижения в путешествии</h2>
+          <h2 class="form__group-title form__group-title--achievements title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h2>
           <ul class="achievements__list">
             <li class="achievements__item">
               <label class="achievements__label control">
@@ -121,11 +121,11 @@
         <fieldset class="form__person-contacts form__fieldset text-input-group">
           <h2 class="form__group-title form__group-title--contacts title">Контактная информация</h2>
           <div class="form__fieldset-wrapper">
-            <div class="form__input-text-item">
+            <div class="form__input-text-item form__input-text-item--contacts">
               <label class="form__input-label form__input-label--contacts" for="phone">Номер телефона</label>
               <input class="form__input-text" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
             </div>
-            <div class="form__input-text-item">
+            <div class="form__input-text-item form__input-text-item--contacts">
               <label class="form__input-label form__input-label--contacts" for="email">Адрес почты</label>
               <input class="form__input-text" type="email" id="email" name="email" placeholder="Введите почту *" required>
             </div>
@@ -162,8 +162,8 @@
         </fieldset>
 
         <div class="form__submit contest__form-submit">
-          <button class="button button--form contest__form-submit" type="submit">Отправить форму</button>
-          <p class="contest__form-legend"><span class="contest__form-legend-star">*</span> — обязательные поля</p>
+          <button class="button button--form" type="submit">Отправить форму</button>
+          <p class="contest__form-legend"><span class="contest__form-legend-star">*</span> — обязательные <span class="contest__form-legend--desktop-note">для заполнения</span> поля</p>
         </div>
       </form>
     </main>

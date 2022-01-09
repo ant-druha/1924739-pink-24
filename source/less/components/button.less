@@ -10,6 +10,8 @@
   transition: color @transition-settings, background-color @transition-settings, opacity @transition-settings;
 
   &--form {
+    min-height: 63px;
+
     font-size: 18px;
     line-height: 1.67;
     font-weight: bold;
@@ -28,6 +30,10 @@
 
     &:active {
       color: fade(#ffffff, 30%);
+    }
+
+    @media (min-width: @width-md) {
+      min-width: 300px;
     }
   }
 

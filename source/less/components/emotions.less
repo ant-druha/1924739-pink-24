@@ -1,12 +1,20 @@
 .emotions {
   display: flex;
   align-items: center;
-  padding-top: 42px;
+  padding-top: 38px;
+  padding-bottom: 50px;
+
+  text-align: center;
 
   flex-direction: column;
 
   @media (min-width: @width-md) {
     padding-top: 0;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: @width-lg) {
+    padding-bottom: 47px;
   }
 }
 
@@ -28,8 +36,9 @@
 .emotions__text {
   width: 100%;
   min-height: 197px;
-  padding: 22px 20px;
+  padding: 13px 22px;
 
+  font-family: inherit;
   font-size: 18px;
   line-height: 1.67;
   color: @blue-gray;
@@ -54,9 +63,11 @@
 
   @media (min-width: @width-md) {
     max-width: 496px;
+    min-height: 189px;
   }
 
   @media (min-width: @width-lg) {
     max-width: 816px;
+    min-height: 124px;
   }
 }

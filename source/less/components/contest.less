@@ -12,15 +12,27 @@
 }
 
 .contest__form-legend {
-  margin: 0;
+  margin: 34px 0 0;
 
   font-size: 14px;
   line-height: 2.14;
   color: @blue-gray;
 
   text-transform: uppercase;
+
+  @media (min-width: @width-md) {
+    margin: 0;
+  }
 }
 
 .contest__form-legend-star {
   color: @pinky-red;
+}
+
+.contest__form-legend--desktop-note {
+  display: none;
+
+  @media (min-width: @width-lg) {
+    display: inline;
+  }
 }
