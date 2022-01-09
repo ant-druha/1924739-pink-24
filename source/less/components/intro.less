@@ -46,15 +46,6 @@
   @media (max-width: @width-md-only) {
     .wrapper--sm();
   }
-
-  //@media (min-width: @width-md) and (max-width: @width-lg-only) {
-  //  padding: 0;
-  //}
-
-  @media (min-width: @width-lg) {
-    //text-align: left;
-    //padding-left: 120px;
-  }
 }
 
 .intro__title {
@@ -62,8 +53,13 @@
 
   font-style: normal;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: 300;
+
+  @media (min-width: @width-md) {
+    font-size: 50px;
+    line-height: 1.36;
+  }
 }
 
 .intro__top {
@@ -78,8 +74,18 @@
   }
 
   &--catalog {
-    padding-top: 36px;
-    padding-bottom: 84px;
+    padding-top: 28px;
+    padding-bottom: 76px;
+
+    @media (min-width: @width-md) {
+      min-height: 330px;
+      padding-top: 66px;
+    }
+
+    @media (min-width: @width-lg) {
+      min-height: 284px;
+      padding-top: 60px;
+    }
   }
 }
 
@@ -122,12 +128,21 @@
 }
 
 .intro__bottom-catalog {
-  padding-top: 54px;
-  padding-bottom: 60px;
+  padding-top: 44px;
+  padding-bottom: 50px;
 
   color: @blue-gray;
 
   background-color: #ffffff;
+
+  @media (min-width: @width-md) {
+    min-height: 228px;
+    padding-top: 90px;
+  }
+
+  @media (min-width: @width-lg) {
+    min-height: 240px;
+  }
 }
 
 .intro__button-download {
@@ -179,4 +194,17 @@
   font-size: 14px;
   line-height: 2.14;
   color: @blue-gray;
+
+  @media (min-width: @width-md) {
+    max-width: 440px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  @media (min-width: @width-lg) {
+    min-width: 572px;
+  }
 }
