@@ -2,7 +2,7 @@
   .paddings-h(@padding-sm);
 
   padding-top: 39px;
-  padding-bottom: 38px;
+  padding-bottom: 47px;
 
   @media (max-width: @width-md-only) {
     background-color: @light-grey2;
@@ -10,12 +10,12 @@
 
   @media (min-width: @width-md) {
     padding-top: 0;
-    padding-bottom: 44px;
+    padding-bottom: 52px;
   }
 
   @media (min-width: @width-lg) {
     padding-right: 0;
-    padding-bottom: 53px;
+    padding-bottom: 62px;
     padding-left: 0;
   }
 }
@@ -27,7 +27,7 @@
   max-width: 830px;
 
   grid-template-columns: 1fr;
-  row-gap: 43px;
+  row-gap: 52px;
 
   @media (min-width: @width-lg) {
     display: grid;
@@ -49,4 +49,8 @@
 
 .achievements__label {
   max-width: 260px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    max-width: 550px;
+  }
 }

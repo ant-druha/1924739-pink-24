@@ -10,6 +10,12 @@
   font-size: 18px;
   line-height: 1.67;
   color: @blue-gray;
+
+  max-width: 260px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    max-width: 430px;
+  }
 }
 
 .control__input + .control__label::before {
