@@ -4,6 +4,8 @@
   position: absolute;
   right: 0;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 
   max-width: 460px;
   padding-top: 39px;
@@ -30,29 +32,7 @@
   }
 }
 
-.modal-form--failure {
-  top: 760px;
-
-  @media (min-width: @width-md) {
-    top: 220px;
-  }
-
-  @media (min-width: @width-lg) {
-    top: 195px;
-  }
-}
-
 .modal-form--success {
-  top: 1234px;
-
-  @media (min-width: @width-md) {
-    top: 694px;
-  }
-
-  @media (min-width: @width-lg) {
-    top: 653px;
-  }
-
   &::after {
     content: "";
   }
