@@ -1,4 +1,6 @@
 .form {
+  position: relative;
+
   display: grid;
   margin-bottom: 18px;
 
@@ -394,4 +396,51 @@
 
 .form__submit {
   grid-column: 1 / -1;
+}
+
+
+.form__modal {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.form__button {
+  min-height: 63px;
+
+  font-size: 18px;
+  line-height: 1.67;
+  font-weight: bold;
+  color: #ffffff;
+
+  text-transform: uppercase;
+  background-color: @light-green;
+  border: 2px solid @light-green;
+  border-radius: 1px;
+
+  &:hover {
+    background-color: @light-green2;
+
+    border-color: @light-green2;
+  }
+
+  &:active {
+    color: fade(#ffffff, 30%);
+  }
+
+  @media (min-width: @width-md) {
+    min-width: 300px;
+  }
+}
+
+.form__button[disabled] {
+  background-color: @light-grey;
+
+  border-color: @light-grey;
+}
+
+.form__button--success {
+  @media (min-width: @width-lg) {
+    min-width: 460px;
+  }
 }

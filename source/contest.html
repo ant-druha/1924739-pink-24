@@ -162,8 +162,22 @@
         </fieldset>
 
         <div class="form__submit contest__form-submit">
-          <button class="button button--form" type="submit">Отправить форму</button>
+          <button class="button form__button" type="submit">Отправить форму</button>
           <p class="contest__form-legend"><span class="contest__form-legend-star">*</span> — обязательные <span class="contest__form-legend--desktop-note">для заполнения</span> поля</p>
+        </div>
+
+        <div class="modal-container modal-container--close">
+          <div class="modal form__modal modal-form modal-form--failure">
+            <h2 class="modal-form__title">Что-то пошло не&nbsp;так!</h2>
+            <p class="modal-form__text modal-form__text--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="button form__button modal-form__button">Ok</button>
+          </div>
+
+          <div class="modal form__modal modal-form modal-form--success modal--close">
+            <h2 class="modal-form__title">Ваша заявка отправлена</h2>
+            <p class="modal-form__text modal-form__text--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.</p>
+            <button class="button form__button form__button--success modal-form__button">Закрыть окно</button>
+          </div>
         </div>
       </form>
     </main>
