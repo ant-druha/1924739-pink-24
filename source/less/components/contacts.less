@@ -3,6 +3,10 @@
 
   color: @blue-gray;
 
+  @media (min-width: @width-md) {
+    padding-top: 44px;
+  }
+
   @media (min-width: @width-lg) {
     padding-top: 59px;
   }
@@ -91,7 +95,7 @@
   position: relative;
 
   display: grid;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 
   text-align: center;
 
@@ -102,7 +106,7 @@
   }
 
   @media (min-width: @width-lg) {
-    margin-bottom: 8px;
+    margin-bottom: 11px;
 
     grid-template-columns: repeat(3, 1fr);
   }
@@ -116,7 +120,7 @@
   font-weight: 300;
 
   @media (min-width: @width-md) {
-    margin-bottom: 31px;
+    margin-bottom: 33px;
 
     font-size: 40px;
     line-height: 1.35;
