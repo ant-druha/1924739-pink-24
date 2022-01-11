@@ -182,11 +182,50 @@
 
 .upload__control {
   width: 100%;
+  height: 2px;
+
+  -webkit-appearance: none;
+  appearance: none;
+  background: @blue-gray;
+  outline: none;
+}
+
+.upload__control:hover {
+  cursor: pointer;
+}
+
+.upload__control::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 2px solid @pinky-red;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.upload__control::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 2px solid @pinky-red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.upload__control::-moz-range-thumb:active,
+.upload__control::-webkit-slider-thumb:active {
+  background-color: @pinky-red;
 }
 
 .upload__controls-item {
   display: flex;
   align-items: center;
+  width: 100%;
 
   @media (max-width: @width-md-only) {
     display: none;
