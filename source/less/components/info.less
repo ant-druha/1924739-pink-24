@@ -7,28 +7,52 @@
 }
 
 .info__title {
-  padding: 46px 0 36px 0;
+  padding: 42px 0 35px 0;
 
+  font-size: 24px;
+  line-height: 1.2;
   font-weight: 300;
   text-align: center;
+
+  @media (min-width: @width-md) {
+    padding-top: 46px;
+
+    font-size: 40px;
+    line-height: 54px;
+
+    br:nth-of-type(2) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @width-lg) {
+    padding-top: 63px;
+    padding-bottom: 55px;
+
+    font-size: 50px;
+    line-height: 1.37;
+  }
 }
 
 .info__container {
   position: relative;
 
-  margin-top: 87px;
+  margin-top: 77px;
 
   &::before {
+    .bg-image-gradient-gray(174.3deg);
+
     position: absolute;
-    top: -156px;
+    top: -152px;
     right: 0;
     bottom: 0;
     left: 0;
 
-    background: @bg-gradient-light-grey2;
     content: "";
 
     @media (min-width: @width-md) {
+      .bg-image-gradient-gray(175.3deg);
+
       top: -54px;
     }
 
@@ -39,7 +63,7 @@
     }
   }
 
-  @media (min-width: @width-lg) {
+  @media (min-width: @width-md) {
     margin-top: 0;
   }
 }
@@ -76,10 +100,40 @@
 
     content: "24";
     background: url("../../img/timer.svg") center no-repeat;
+
+    @media (min-width: @width-lg) {
+      min-width: 298px;
+      min-height: 345px;
+      padding-top: 42px;
+
+      font-size: 120px;
+      line-height: 1.36;
+
+      background-size: cover;
+    }
   }
 
   @media (min-width: @width-md) {
     display: flex;
+    padding-top: 55px;
+  }
+
+  @media (min-width: @width-lg) {
+    padding-top: 30px;
+  }
+}
+
+.info__effect-content {
+  @media (min-width: @width-md) {
+    padding-top: 42px;
+    padding-left: 72px;
+
+    text-align: left;
+  }
+
+  @media (min-width: @width-lg) {
+    font-size: 18px;
+    line-height: 1.67;
   }
 }
 
@@ -88,6 +142,39 @@
   line-height: 1.2;
   font-weight: bold;
   color: #000000;
+
+  @media (min-width: @width-md) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-top: 50px;
+    margin-bottom: 22px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.info__effect-text {
+  @media (max-width: @width-md-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @width-md) {
+    margin: 0 0 10px;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-bottom: 30px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .info__effect-link {

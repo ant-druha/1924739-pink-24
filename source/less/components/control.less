@@ -10,46 +10,65 @@
   font-size: 18px;
   line-height: 1.67;
   color: @blue-gray;
+
+  max-width: 260px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    max-width: 430px;
+  }
 }
 
 .control__input + .control__label::before {
   position: absolute;
-  top: 50%;
+  top: -4px;
 
   background-color: #ffffff;
   border: 2px solid @light-grey;
 
-  transform: translateY(-50%);
   background-position: center;
   background-repeat: no-repeat;
   content: "";
 }
 
 .control__input[type="checkbox"] + .control__label {
-  height: 39px;
   margin-left: 59px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    margin-left: 99px;
+  }
 
   &::before {
     left: -59px;
 
     width: 39px;
-    height: 100%;
+    height: 39px;
 
     border-radius: 1px;
   }
 }
 
 .control__input[type="radio"] + .control__label {
-  height: 41px;
-  margin-left: 72px;
+  margin-left: 70px;
+
+  @media (min-width: @width-md) {
+    margin-left: 101px;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-left: 113px;
+  }
 
   &::before {
-    left: -72px;
+    left: -70px;
 
     width: 41px;
-    height: 100%;
+    height: 41px;
 
     border-radius: 50%;
+
+    @media (min-width: @width-md) {
+      left: -60px;
+    }
   }
 }
 

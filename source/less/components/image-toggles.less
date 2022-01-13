@@ -10,6 +10,10 @@
 
     grid-template-rows: repeat(3, 1fr);
   }
+
+  @media (min-width: @width-lg) {
+    margin-top: 10px;
+  }
 }
 
 .image-toggles__button {
@@ -18,11 +22,37 @@
   background-color: transparent;
   border: none;
   opacity: 0.3;
-  cursor: pointer;
+
+  @media (min-width: @width-md) {
+    opacity: 1;
+
+    fill: @pinky-red;
+  }
 
   &.slider__toggle--current {
     opacity: 1;
 
     fill: @pinky-red;
+  }
+
+  &--crop {
+    @media (min-width: @width-md) and (max-width: @width-lg-only) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &--fill {
+    @media (min-width: @width-md) and (max-width: @width-lg-only) {
+      width: 24px;
+      height: 22px;
+    }
+  }
+
+  &--sharpness {
+    @media (min-width: @width-md) and (max-width: @width-lg-only) {
+      width: 16px;
+      height: 16px;
+    }
   }
 }

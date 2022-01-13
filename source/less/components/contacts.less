@@ -1,7 +1,15 @@
 .contacts {
-  padding-top: 50px;
+  padding-top: 42px;
 
   color: @blue-gray;
+
+  @media (min-width: @width-md) {
+    padding-top: 44px;
+  }
+
+  @media (min-width: @width-lg) {
+    padding-top: 59px;
+  }
 }
 
 .contacts__map {
@@ -60,11 +68,11 @@
     content: "";
 
     @media (min-width: @width-md) {
-      height: 50px;
+      height: 70px;
     }
 
     @media (min-width: @width-lg) {
-      height: 150px;
+      height: 102px;
     }
   }
 
@@ -87,32 +95,44 @@
   position: relative;
 
   display: grid;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 
   text-align: center;
 
   @media (min-width: @width-md) {
-    margin-bottom: 0;
+    margin-bottom: 10px;
 
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: @width-lg) {
-    margin-bottom: 26px;
+    margin-bottom: 11px;
 
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .contacts__title {
-  margin-bottom: 45px;
+  margin-bottom: 33px;
 
   font-size: 24px;
   line-height: 1.2;
   font-weight: 300;
 
   @media (min-width: @width-md) {
+    margin-bottom: 33px;
+
+    font-size: 40px;
+    line-height: 1.35;
+
     grid-column: 1 / -1;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-bottom: 40px;
+
+    font-size: 50px;
+    line-height: 1.36;
   }
 }
 
@@ -125,11 +145,33 @@
   font-size: 18px;
   line-height: 1.39;
   font-weight: bold;
+}
 
-  &:not(:last-child) {
-    @media (max-width: @width-md) {
-      margin-bottom: 34px;
-    }
+.contacts__type--phone {
+  margin-bottom: 17px;
+
+  @media (min-width: @width-md) {
+    margin-left: -11px;
+  }
+}
+
+.contacts__type--write {
+  margin-bottom: 21px;
+
+  @media (min-width: @width-md) {
+    margin-left: 11px;
+  }
+}
+
+.contacts__type--address {
+  margin-bottom: 10px;
+
+  @media (min-width: @width-md) {
+    margin-top: 22px;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-top: 0;
   }
 }
 
@@ -144,12 +186,28 @@ address.contacts__type {
   }
 }
 
+.contacts__type-text {
+  margin: 0;
+
+  font-style: normal;
+}
+
 .contacts__type-text,
 .contacts__type-link {
   font-size: 24px;
   line-height: 1.37;
   font-weight: 300;
   color: @pinky-red;
+
+  @media (min-width: @width-md) {
+    line-height: 1.47;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-top: 20px;
+
+    line-height: 1.39;
+  }
 }
 
 .contacts__type-link {
@@ -166,10 +224,4 @@ address.contacts__type {
   &:active {
     opacity: 0.3;
   }
-}
-
-.contacts__type-text {
-  margin: 0;
-
-  font-style: normal;
 }

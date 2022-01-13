@@ -1,20 +1,112 @@
+.table-tariffs {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 .table-tariffs__row {
   display: flex;
+  min-height: 60px;
+
+  @media (min-width: @width-md) {
+    min-height: 46px;
+  }
+
+  @media (min-width: @width-lg) {
+    min-height: 60px;
+    //font-size: 18px;
+    //line-height: 1.67;
+  }
+}
+
+.table-tariffs__header-row {
+  display: flex;
+
+  background-color: transparent;
+
+  align-content: stretch;
 }
 
 .table-tariffs__header {
   position: relative;
 
-  min-width: 320px;
-  //todo: when adding min-width - horizontal scroll appears for entire page
-  // if set container ('table-tariffs__row' class) to flex - scroll will disappear
+  display: block;
+  min-width: 280px;
+  min-height: 98px;
+  padding-top: 13px;
 
   color: #ffffff;
 
-  background-color: @blue-gray;
+  &:not(:last-of-type) {
+    border-right: 2px solid @light-grey;
+  }
 
-  //min-width: 320px;
-  //left: -320px;
+  &:not(:first-of-type) {
+    background-color: @blue-gray;
+  }
+
+  &.slider__list {
+    padding-top: 11px;
+  }
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    min-width: 155px;
+    min-height: 80px;
+    padding-top: 13px;
+  }
+
+  @media (min-width: @width-lg) {
+    min-width: 234px;
+    min-height: 98px;
+    padding-top: 16px;
+  }
+}
+
+.table-tariffs__header--popular {
+  position: relative;
+
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 110px;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: normal;
+
+    text-transform: uppercase;
+    background-color: @pinky-red;
+
+    content: "хит";
+    transform: translate(-28px, 18px) rotate(-45deg);
+
+    @media (min-width: @width-md) {
+      width: 100px;
+
+      line-height: 20px;
+
+      transform: translate(-29px, 15px) rotate(-45deg);
+    }
+
+    @media (min-width: @width-lg) {
+      width: 110px;
+      height: 24px;
+
+      transform: translate(-25px, 18px) rotate(-45deg);
+    }
+  }
+}
+
+.table-tariffs__body {
+  background-color: #ffffff;
+  border: 2px solid @light-grey;
+
+  border-bottom: none;
+  border-right: none;
 }
 
 .table-tariffs__title {
@@ -23,18 +115,126 @@
   font-weight: bold;
 
   text-transform: uppercase;
+
+  @media (min-width: @width-lg) {
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 
 .table-tariffs__price {
+  margin: -4px 0 0;
+
   font-size: 18px;
   line-height: 1.67;
   font-weight: 300;
+
+  @media (min-width: @width-lg) {
+    font-size: 24px;
+    line-height: 1.55;
+  }
+}
+
+.table-tariffs__feature-value .table-tariffs__feature-name {
+  height: 100%;
+
+  border: none;
+
+  @media (min-width: @width-md-only) {
+    display: none;
+  }
 }
 
 .table-tariffs__feature-name {
+  //min-width: 280px;
+  //min-height: 61px;
+  //height: 100%;
+  display: flex;
+  align-items: center;
+  //padding-top: 14px;
+  padding-left: 19px;
+
   font-size: 14px;
   line-height: 2.14;
   color: @blue-gray;
 
   text-transform: uppercase;
+
+  border-bottom: 2px solid @light-grey;
+  border-right: 2px solid @light-grey;
+
+  @media (min-width: @width-md) {
+    //min-width: 154px;
+    //min-height: 45px;
+    //padding-top: 7px;
+    padding-left: 14px;
+
+    text-transform: capitalize;
+  }
+
+  @media (min-width: @width-lg) {
+    //min-width: 234px;
+    //min-height: 60px;
+    //padding-top: 12px;
+    padding-left: 20px;
+
+    font-size: 18px;
+    line-height: 1.67;
+  }
+}
+
+.table-tariffs__feature-value {
+  position: relative;
+
+  border-bottom: 2px solid @light-grey;
+  border-right: 2px solid @light-grey;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: @width-md-only) {
+    &::before {
+      background-position: center right 18px;
+    }
+  }
+
+  @media (min-width: @width-md) {
+    //min-height: 45px;
+    padding-top: 7px;
+    padding-left: 14px;
+
+    text-transform: capitalize;
+  }
+}
+
+.table-tariffs__column {
+  min-width: 278px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    min-width: 155px;
+  }
+
+  @media (min-width: @width-lg) {
+    min-width: 236px;
+  }
+}
+
+.table-tariffs__feature-value--included::before {
+  background-image: url("../../img/check.svg");
+  background-size: 31px 21px;
+}
+
+
+.table-tariffs__feature-value--excluded::before {
+  background-image: url("../../img/cross.svg");
+  background-size: 27px 27px;
 }

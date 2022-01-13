@@ -10,6 +10,14 @@
   grid-column: 2 / 3;
   grid-row: 1 / 3;
 
+  @media (min-width: @width-md) {
+    min-height: 620px;
+  }
+
+  @media (min-width: @width-lg) {
+    min-height: 743px;
+  }
+
   &::after {
     position: relative;
 
@@ -49,6 +57,13 @@
     }
 
     @media (min-width: @width-lg) {
+      top: unset;
+      right: 4px;
+      left: unset;
+
+      width: 1050px;
+      height: 645px;
+
       background-image: url("../../img/intro-image-front-desktop.png");
 
       @media (min-resolution: 2dppx) {
@@ -60,8 +75,8 @@
   @media (min-width: @width-md) {
     padding-top: 74px;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content auto;
   }
 }
 
@@ -69,11 +84,27 @@
   margin-top: 24px;
   margin-bottom: 28px;
 
+  line-height: 1.2;
+
   grid-row: 1 / 2;
+
+  br {
+    @media (max-width: @width-md-only) {
+      display: none;
+    }
+  }
 
   @media (min-width: @width-md) {
     max-width: 300px;
+    margin-top: 20px;
 
     font-size: 40px;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-top: 26px;
+
+    font-size: 50px;
+    line-height: 1.36;
   }
 }

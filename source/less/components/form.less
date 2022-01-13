@@ -1,11 +1,13 @@
 .form {
+  position: relative;
+
   display: grid;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 
   @media (min-width: @width-md) {
     margin-bottom: 50px;
 
-    row-gap: 70px;
+    row-gap: 66px;
   }
 
   @media (min-width: @width-lg) {
@@ -69,16 +71,8 @@
 }
 
 .form__emotions {
-  padding-bottom: 52px;
-
-  text-align: center;
-
   order: -2;
   grid-column: 1 / -1;
-
-  @media (min-width: @width-md) {
-    padding-top: 0;
-  }
 }
 
 .form__device {
@@ -95,7 +89,7 @@
 
 .form__person-contacts {
   margin-bottom: 44px;
-  padding-top: 42px;
+  padding-top: 32px;
 
   order: -6;
   grid-column: 1 / -1;
@@ -103,6 +97,11 @@
   @media (min-width: @width-md) {
     margin-bottom: 0;
     padding-top: 0;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: @width-lg) {
+    padding-bottom: 9px;
   }
 
   .form__input-label {
@@ -167,7 +166,7 @@
 }
 
 .form__person-name {
-  margin-bottom: 44px;
+  margin-bottom: 42px;
   padding-top: 0;
 
   order: -10;
@@ -183,10 +182,14 @@
   @media (min-width: @width-md) {
     margin-bottom: 0;
   }
+
+  @media (min-width: @width-lg) {
+    margin-top: 4px;
+  }
 }
 
 .form__group-title {
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 
   font-size: 14px;
   line-height: 1.29;
@@ -197,24 +200,31 @@
 
   &--achievements {
     @media (min-width: @width-md) {
-      margin-bottom: 34px;
+      min-width: 440px;
+      margin-bottom: 39px;
+    }
+
+    @media (min-width: @width-lg) {
+      margin-bottom: 39px;
     }
   }
 
   &--device {
+    margin-bottom: 39px;
+
     @media (min-width: @width-md) {
-      margin-bottom: 34px;
+      margin-bottom: 41px;
     }
   }
 
   &--contacts {
     @media (min-width: @width-md) {
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
   }
 
   &--emotions {
-    @margin-bt: 22px;
+    @margin-bt: 18px;
 
     position: relative;
 
@@ -232,7 +242,17 @@
     }
 
     @media (min-width: @width-md) {
-      @margin-bt: 28px;
+      @margin-bt: 31px;
+
+      margin-bottom: @margin-bt;
+
+      &::after {
+        height: calc(~"50% + @{margin-bt}");
+      }
+    }
+
+    @media (min-width: @width-lg) {
+      @margin-bt: 27px;
 
       margin-bottom: @margin-bt;
 
@@ -249,13 +269,68 @@
   flex-direction: column;
 
   &:not(:last-of-type) {
-    margin-bottom: 29px;
+    margin-bottom: 17px;
+
+    @media (min-width: @width-md) {
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (min-width: @width-md) {
+    align-items: baseline;
+  }
+
+  &--contacts {
+    @media (min-width: @width-md) {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+
+        width: 59px;
+        height: 59px;
+
+        background-color: @light-grey;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+      }
+    }
+
+    &:not(:last-of-type) {
+      @media (min-width: @width-md) {
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: @width-lg) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.form__input-phone {
+  @media (min-width: @width-md) {
+    &::after {
+      background-image: url("../../img/phone.svg");
+    }
+  }
+}
+
+.form__input-email {
+  @media (min-width: @width-md) {
+    &::after {
+      background-image: url("../../img/mail.svg");
+    }
   }
 }
 
 .form__input-label {
   display: block;
-  padding-bottom: 17px;
+  padding-bottom: 5px;
   padding-left: 23px;
 
   font-size: 14px;
@@ -271,12 +346,14 @@
   &--name {
     @media (min-width: @width-md) {
       padding-right: 20px;
+      padding-bottom: 0;
+      padding-left: 0;
     }
   }
 
   &--contacts {
     @media (min-width: @width-md) {
-      padding-top: 22px;
+      padding-top: 10px;
       padding-left: 20px;
     }
   }
@@ -285,7 +362,7 @@
 .form__input-text {
   display: block;
   width: 100%;
-  padding: 21px 0 21px 18px;
+  padding: 15px 0 14px 20px;
 
   font-size: 18px;
   line-height: 1.67;
@@ -293,6 +370,9 @@
 
   border: 2px solid @light-grey;
   border-radius: 1px;
+  //todo it is not set in the design, but if not set- it does not match PP. Remove?
+
+  letter-spacing: 0.02em;
 
   &::placeholder {
     color: @blue-gray;
@@ -308,6 +388,59 @@
   }
 }
 
+.form__person-contacts .form__input-text {
+  @media (min-width: @width-md) {
+    padding-right: 65px;
+  }
+}
+
 .form__submit {
   grid-column: 1 / -1;
+}
+
+
+.form__modal {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.form__button {
+  min-height: 63px;
+
+  font-size: 18px;
+  line-height: 1.67;
+  font-weight: bold;
+  color: #ffffff;
+
+  text-transform: uppercase;
+  background-color: @light-green;
+  border: 2px solid @light-green;
+  border-radius: 1px;
+
+  &:hover {
+    background-color: @light-green2;
+
+    border-color: @light-green2;
+  }
+
+  &:active {
+    color: fade(#ffffff, 30%);
+  }
+
+  @media (min-width: @width-md) {
+    min-width: 300px;
+  }
+}
+
+.form__button[disabled] {
+  background-color: @light-grey;
+
+  border-color: @light-grey;
+}
+
+.form__button--success {
+  @media (min-width: @width-lg) {
+    min-width: 460px;
+  }
 }

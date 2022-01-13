@@ -1,8 +1,8 @@
 .achievements {
   .paddings-h(@padding-sm);
 
-  padding-top: 42px;
-  padding-bottom: 55px;
+  padding-top: 39px;
+  padding-bottom: 47px;
 
   @media (max-width: @width-md-only) {
     background-color: @light-grey2;
@@ -10,13 +10,13 @@
 
   @media (min-width: @width-md) {
     padding-top: 0;
-    padding-bottom: 61px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: @width-lg) {
-    padding-right: 60px;
-    padding-bottom: 56px;
-    padding-left: 60px;
+    padding-right: 0;
+    padding-bottom: 62px;
+    padding-left: 0;
   }
 }
 
@@ -24,12 +24,15 @@
   .list-style-default;
 
   display: grid;
+  max-width: 830px;
 
   grid-template-columns: 1fr;
-  row-gap: 40px;
+  row-gap: 52px;
 
   @media (min-width: @width-lg) {
     display: grid;
+    margin-right: 60px;
+    margin-left: 60px;
 
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -41,5 +44,13 @@
 .achievements__item {
   @media (min-width: @width-lg) {
     width: max-content;
+  }
+}
+
+.achievements__label {
+  max-width: 260px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    max-width: 550px;
   }
 }

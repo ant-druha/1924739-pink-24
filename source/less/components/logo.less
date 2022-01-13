@@ -1,4 +1,6 @@
 .logo {
+  --color-secondary: transparent;
+
   display: inline-block;
   width: fit-content;
 
@@ -10,12 +12,91 @@
   text-decoration: none;
 
   &:hover {
-    fill: @pinky-red;
+    .logo__text,
+    .logo__image {
+      --color-secondary: @pinky-red;
+
+      fill: @pinky-red;
+    }
+  }
+
+  &.header__logo:active {
+    .logo__text,
+    .logo__image {
+      fill: #ffffff;
+    }
+  }
+
+  &.footer__logo:active {
+    .logo__text {
+      fill: @blue-gray;
+    }
+
+    .logo__image {
+      --color-secondary: @blue-gray;
+    }
   }
 
   &:active {
     opacity: 0.3;
+  }
+}
 
-    fill: #ffffff;
+.logo__image {
+  margin-right: 12px;
+}
+
+.header__logo .logo__text,
+.header__logo .logo__image {
+  fill: #ffffff;
+
+  @media (min-width: @width-lg) {
+    --color-secondary: @pinky-red;
+  }
+}
+
+.footer__logo .logo__image {
+  fill: @pinky-red;
+  --color-secondary: @blue-gray;
+}
+
+.footer__logo .logo__text {
+  fill: @blue-gray;
+  --color-secondary: @pinky-red;
+}
+
+.logo--sm {
+  display: inline-block;
+  width: 75px;
+  height: 23px;
+
+  @media (min-width: @width-md) {
+    display: none;
+  }
+}
+
+.logo--md {
+  display: none;
+  width: 145px;
+  height: 40px;
+
+  @media (min-width: @width-md) and (max-width: @width-lg-only) {
+    display: inline-block;
+  }
+}
+
+.footer__logo .logo--md {
+  @media (max-width: @width-lg-only) {
+    display: inline-block;
+  }
+}
+
+.logo--lg {
+  display: none;
+  width: 145px;
+  height: 40px;
+
+  @media (min-width: @width-lg) {
+    display: inline-block;
   }
 }

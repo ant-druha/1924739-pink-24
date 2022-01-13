@@ -9,12 +9,39 @@
   }
 
   @media (min-width: @width-md) {
+    align-items: start;
+    padding-bottom: 52px;
+
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @width-lg) {
+    position: relative;
+
+    margin-bottom: 30px;
+    padding-bottom: 57px;
+
+    grid-template-rows: min-content min-content auto;
+    grid-auto-rows: min-content;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: @padding-lg;
+      bottom: 0;
+      left: @padding-lg;
+      z-index: -1;
+
+      background-color: @light-grey2;
+
+      content: "";
+    }
   }
 }
 
 .upload__title {
-  padding-bottom: 52px;
+  padding-bottom: 42px;
 
   font-size: 14px;
   line-height: 2.14;
@@ -25,8 +52,19 @@
 
   grid-column: 1 / -1;
 
+  @media (min-width: @width-md) {
+    padding-bottom: 70px;
+
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
   @media (max-width: @width-lg-only) {
     .wrapper--stretched(@padding-sm);
+  }
+
+  @media (min-width: @width-lg) {
+    padding-bottom: 67px;
   }
 }
 
@@ -39,7 +77,17 @@
   background-color: @light-grey2;
 
   @media (min-width: @width-md) {
+    padding-top: 57px;
+    padding-right: 10px;
+    padding-bottom: 0;
+
     grid-row: 2 / -1;
+  }
+
+  @media (min-width: @width-lg) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
   }
 }
 
@@ -47,6 +95,11 @@
   display: inline-block;
 
   vertical-align: top;
+
+  @media (min-width: @width-md) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .upload__toggles {
@@ -55,19 +108,24 @@
   grid-column: 1 / -1;
 
   @media (max-width: @width-md-only) {
-    margin-bottom: 39px;
+    margin-bottom: 30px;
+    margin-left: -12px;
   }
 
   @media (min-width: @width-md) {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
-    row-gap: 15px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: @width-lg) {
+    row-gap: 28px;
   }
 }
 
 .upload__controls {
   display: grid;
-  padding-bottom: 73px;
+  padding-bottom: 60px;
 
   background-color: @light-grey2;
 
@@ -75,18 +133,23 @@
   grid-template-rows: repeat(2, min-content);
   grid-column: 1 / -1;
 
-  @media (max-width: @width-md) {
+  @media (max-width: @width-md-only) {
     .wrapper--sm();
-
-    margin-bottom: 73px;
   }
 
   @media (min-width: @width-md) {
-    padding-bottom: 63px;
+    align-items: start;
+    padding-top: 64px;
+    padding-bottom: 0;
+    padding-left: 40px;
 
     grid-column: 2 / 3;
     grid-template-columns: min-content auto;
-    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media (min-width: @width-lg) {
+    padding-top: 45px;
+    padding-left: 0;
   }
 }
 
@@ -101,7 +164,13 @@
     grid-template-rows: repeat(3, 1fr);
     grid-column: 2 / -1;
     grid-row: 1 / -1;
-    row-gap: 15px;
+    row-gap: 49px;
+  }
+}
+
+.upload__controls-list.slider__list {
+  @media (min-width: @width-lg) {
+    margin-top: 22px;
   }
 }
 
@@ -113,11 +182,48 @@
 
 .upload__control {
   width: 100%;
+  height: 2px;
+
+  appearance: none;
+  background: @blue-gray;
+  outline: none;
+}
+
+.upload__control:hover {
+  cursor: pointer;
+}
+
+.upload__control::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 2px solid @pinky-red;
+  border-radius: 50%;
+  cursor: pointer;
+
+  appearance: none;
+}
+
+.upload__control::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 2px solid @pinky-red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.upload__control::-moz-range-thumb:active,
+.upload__control::-webkit-slider-thumb:active {
+  background-color: @pinky-red;
 }
 
 .upload__controls-item {
   display: flex;
   align-items: center;
+  width: 100%;
 
   @media (max-width: @width-md-only) {
     display: none;
@@ -137,8 +243,15 @@
 
   flex-direction: column;
 
+  @media (min-width: @width-md) {
+    align-self: end;
+    margin-left: 23px;
+  }
+
   @media (min-width: @width-lg) {
-    align-items: center;
+    justify-content: start;
+    margin-top: 80px;
+    margin-left: 0;
 
     flex-direction: row;
   }
@@ -153,6 +266,10 @@
   border: 3px solid @pinky-red;
   border-radius: 30px;
 
+  @media (min-width: @width-md) {
+    width: 260px;
+  }
+
   &:hover {
     color: #ffffff;
 
@@ -164,11 +281,11 @@
   }
 
   &:not(:last-of-type) {
-    @media (max-width: @width-md) {
-      margin-bottom: 12px;
+    @media (max-width: @width-md-only) {
+      margin-bottom: 13px;
     }
 
-    @media (max-width: @width-lg) {
+    @media (min-width: @width-md) and (max-width: @width-lg-only) {
       margin-bottom: 24px;
     }
 
