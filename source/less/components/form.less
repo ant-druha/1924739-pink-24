@@ -281,25 +281,6 @@
   }
 
   &--contacts {
-    @media (min-width: @width-md) {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        top: 2px;
-        right: 2px;
-
-        width: 59px;
-        height: 59px;
-
-        background-color: @light-grey;
-
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
-      }
-    }
-
     &:not(:last-of-type) {
       @media (min-width: @width-md) {
         margin-bottom: 24px;
@@ -308,22 +289,6 @@
       @media (min-width: @width-lg) {
         margin-bottom: 0;
       }
-    }
-  }
-}
-
-.form__input-phone {
-  @media (min-width: @width-md) {
-    &::after {
-      background-image: url("../../img/phone.svg");
-    }
-  }
-}
-
-.form__input-email {
-  @media (min-width: @width-md) {
-    &::after {
-      background-image: url("../../img/mail.svg");
     }
   }
 }
@@ -391,6 +356,18 @@
 .form__person-contacts .form__input-text {
   @media (min-width: @width-md) {
     padding-right: 65px;
+  }
+}
+
+.form__input-email .form__input-text {
+  @media (min-width: @width-md) {
+    .bg-input-contacts(18px, 13px, 59px, "../../img/mail.svg");
+  }
+}
+
+.form__input-phone .form__input-text {
+  @media (min-width: @width-md) {
+    .bg-input-contacts(20px, 19px, 59px, "../../img/phone.svg");
   }
 }
 
