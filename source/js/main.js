@@ -1,11 +1,11 @@
 const header = document.querySelector('.header');
-const navToggle = header.querySelector('.main-nav__toggle');
+const navToggle = header.querySelector('.header__nav-toggle');
 
 header.classList.remove('header--nojs');
 
 navToggle.addEventListener('click', function () {
-  header.classList.toggle('main-nav--closed')
-  header.classList.toggle('main-nav--opened')
+  header.classList.toggle('header--nav-closed')
+  header.classList.toggle('header--nav-opened')
 });
 
 document.querySelectorAll('.modal-container').forEach(dialogContainer => {
