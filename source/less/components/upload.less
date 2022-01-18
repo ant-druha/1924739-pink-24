@@ -254,8 +254,19 @@
   cursor: pointer;
 }
 
-.upload__control::-moz-range-thumb:active,
-.upload__control::-webkit-slider-thumb:active {
+.upload__control:focus::-webkit-slider-thumb {
+  background-color: @pinky-red;
+}
+
+.upload__control:focus::-moz-range-thumb {
+  background-color: @pinky-red;
+}
+
+.upload__control:active::-webkit-slider-thumb {
+  background-color: @pinky-red;
+}
+
+.upload__control:active::-moz-range-thumb {
   background-color: @pinky-red;
 }
 
