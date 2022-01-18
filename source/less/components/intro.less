@@ -14,7 +14,7 @@
     content: "";
     background-image: url("../../img/back-mobile.jpg");
     background-position: top;
-    background-size: cover;
+    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/back-mobile@2x.jpg");
@@ -36,6 +36,13 @@
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/back-desktop@2x.jpg");
       }
+    }
+  }
+
+  &--contest,
+  &--catalog {
+    &::before {
+      background-size: cover;
     }
   }
 }
