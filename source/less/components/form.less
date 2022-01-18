@@ -340,12 +340,19 @@
   }
 
   &:hover {
-    outline-color: @blue-gray;
+    border-color: @blue-gray;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: @blue-gray;
   }
 
   &:active,
   &:not(:placeholder-shown) {
-    outline-color: @pinky-red;
+    outline: none;
+    border-color: @pinky-red;
   }
 }
 
