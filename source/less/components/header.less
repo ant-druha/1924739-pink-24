@@ -5,22 +5,6 @@
 
   background-color: @header-bg-color;
 
-  .wrapper {
-    position: relative;
-
-    display: grid;
-    align-items: center;
-
-    grid-template-columns: auto auto;
-    grid-template-rows: minmax(@height-header-sm, min-content) min-content;
-
-    @media (min-width: @width-md) {
-      align-items: end;
-
-      grid-template-rows: minmax(@height-header-md, min-content) min-content;
-    }
-  }
-
   &.header--nojs,
   &.header--nav-opened {
     @media (max-width: @width-lg-only) {
