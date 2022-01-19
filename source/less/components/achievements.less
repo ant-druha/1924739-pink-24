@@ -15,7 +15,7 @@
 
   @media (min-width: @width-lg) {
     padding-right: 0;
-    padding-bottom: 62px;
+    padding-bottom: 14px;
     padding-left: 0;
   }
 }
@@ -30,20 +30,21 @@
   row-gap: 52px;
 
   @media (min-width: @width-lg) {
-    display: grid;
+    display: block;
+    width: 820px;
     margin-right: 60px;
     margin-left: 60px;
 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    column-gap: 56px;
+    column-count: 3;
+    column-gap: 95px;
   }
 }
 
 .achievements__item {
   @media (min-width: @width-lg) {
     width: max-content;
+    margin-bottom: 48px;
+    padding-top: 4px;
   }
 }
 
