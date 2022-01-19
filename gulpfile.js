@@ -82,7 +82,7 @@ const imagesCopy = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
