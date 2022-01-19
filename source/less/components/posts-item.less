@@ -42,6 +42,7 @@
       }
 
       @media (min-width: @width-lg) {
+        top: 54px;
         right: @padding-lg;
       }
     }
@@ -54,10 +55,6 @@
       margin-bottom: -4px;
     }
   }
-}
-
-.post-item__picture {
-  width: 100%;
 }
 
 .post-item__image {
@@ -149,8 +146,9 @@
     height: 12px;
     margin-right: 18px;
 
+    flex: 0 0 auto;
     content: "";
-    background: url("../../img/heart.svg");
+    background: url("../../img/heart.svg") no-repeat;
 
     @media (min-width: @width-md) {
       margin-right: 0;
@@ -159,6 +157,7 @@
     }
   }
 
+  //todo: does not work on Safari
   &:hover::before {
     cursor: pointer;
   }

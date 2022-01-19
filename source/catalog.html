@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" crossorigin="anonymous" as="font">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -11,23 +12,23 @@
     <title>Фотографии</title>
   </head>
   <body>
-    <header class="header main-nav--closed header--nojs">
+    <header class="header header--nav-closed header--nojs">
       <div class="wrapper">
-        <a class="header__logo logo" href="index.html">
-          <svg class="logo--sm" width="75" height="23">
+        <a class="header__logo logo" href="index.html" aria-label="Перейти на главную страницу.">
+          <svg class="logo__sm" width="75" height="23" aria-label="Логотип PINK.">
             <use class="logo__text" xlink:href="img/sprite.svg#logo-text-simple" width="75" height="23"></use>
           </svg>
-          <svg class="logo--md" width="145" height="40">
+          <svg class="logo__md" width="145" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-simple" width="59" height="40"></use>
             <use class="logo__text" x="71" y="18" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
           </svg>
-          <svg class="logo--lg" width="147" height="40">
+          <svg class="logo__lg" width="147" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-desktop" width="61" height="40"></use>
             <use class="logo__text" x="71" y="7" xlink:href="img/sprite.svg#logo-text-desktop" width="75" height="34"></use>
           </svg>
         </a>
 
-        <button class="header__main-nav-toggle main-nav__toggle" type="button">
+        <button class="header__nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <nav class="header__main-nav main-nav">
@@ -50,7 +51,7 @@
     </header>
 
     <main class="catalog">
-      <section class="catalog__intro intro">
+      <section class="catalog__intro intro intro--catalog">
         <div class="intro__top intro__top--catalog">
           <div class="intro__wrapper wrapper">
             <h1 class="intro__title catalog__intro-title title">Фотографии<br>пользователей</h1>
@@ -67,7 +68,7 @@
         <h2 class="visually-hidden">Галерея</h2>
         <ul class="gallery__posts-list list-style-default posts-list wrapper">
           <li class="posts-list__item post-item post-item--featured">
-            <picture class="post-item__picture">
+            <picture class="picture-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/panorama-desktop.webp 1x, img/panorama-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet.webp 1x, img/panorama-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/panorama-mobile.webp 1x, img/panorama-mobile@2x.webp 2x">
@@ -90,7 +91,7 @@
             </div>
           </li>
           <li class="posts-list__item post-item">
-            <picture class="post-item__picture">
+            <picture class="picture-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
@@ -111,7 +112,7 @@
             </div>
           </li>
           <li class="posts-list__item post-item">
-            <picture class="post-item__picture">
+            <picture class="picture-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
@@ -132,7 +133,7 @@
             </div>
           </li>
           <li class="posts-list__item post-item">
-            <picture class="post-item__picture">
+            <picture class="picture-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
@@ -153,7 +154,7 @@
             </div>
           </li>
           <li class="posts-list__item post-item">
-            <picture class="post-item__picture">
+            <picture class="picture-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2x.webp 2x">
@@ -174,7 +175,7 @@
             </div>
           </li>
           <li class="posts-list__item post-item">
-            <picture class="post-item__picture">
+            <picture class="picture-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-5-desktop.webp 1x, img/photo-5-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-5-tablet.webp 1x, img/photo-5-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-5-mobile.webp 1x, img/photo-5-mobile@2x.webp 2x">
@@ -195,7 +196,7 @@
             </div>
           </li>
           <li class="posts-list__item post-item">
-            <picture class="post-item__picture">
+            <picture class="picture-container">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-6-desktop.webp 1x, img/photo-6-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-6-tablet.webp 1x, img/photo-6-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-6-mobile.webp 1x, img/photo-6-mobile@2x.webp 2x">
@@ -222,7 +223,7 @@
         <h2 class="upload__title title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
         <div class="upload__image">
 
-          <picture class="post-item__picture">
+          <picture class="picture-container">
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-7-desktop.webp 1x, img/photo-7-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-7-tablet.webp 1x, img/photo-7-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/photo-7-mobile.webp 1x, img/photo-7-mobile@2x.webp 2x">
@@ -259,7 +260,7 @@
             <li class="upload__controls-item slider__item">
               <label class="upload__label control">
                 <span class="visually-hidden">Резкость.</span>
-                <input class="upload__control" type="range" name="photo-sharpness" min="1" max="100" value="55">
+                <input class="upload__control" type="range" name="photo-sharpness" min="1" max="100" value="50">
               </label>
             </li>
           </ul>
@@ -274,12 +275,12 @@
 
     <footer class="footer">
       <div class="footer__wrapper wrapper">
-        <a class="footer__logo logo">
-          <svg class="logo--md" width="145" height="40">
+        <a class="footer__logo logo" href="index.html" aria-label="Перейти на главную страницу.">
+          <svg class="logo__md" width="145" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-simple" width="59" height="40"></use>
             <use class="logo__text" x="71" y="18" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
           </svg>
-          <svg class="logo--lg" width="147" height="40">
+          <svg class="logo__lg" width="147" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-desktop" width="61" height="40"></use>
             <use class="logo__text" x="71" y="6" xlink:href="img/sprite.svg#logo-text-desktop" width="75" height="34"></use>
           </svg>

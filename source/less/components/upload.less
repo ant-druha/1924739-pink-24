@@ -108,7 +108,7 @@
   grid-column: 1 / -1;
 
   @media (max-width: @width-md-only) {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     margin-left: -12px;
   }
 
@@ -116,6 +116,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     row-gap: 50px;
+    justify-items: center;
   }
 
   @media (min-width: @width-lg) {
@@ -124,8 +125,10 @@
 }
 
 .upload__controls {
+  position: relative;
+
   display: grid;
-  padding-bottom: 60px;
+  padding-bottom: 68px;
 
   background-color: @light-grey2;
 
@@ -145,17 +148,48 @@
 
     grid-column: 2 / 3;
     grid-template-columns: min-content auto;
+    column-gap: 28px;
   }
 
   @media (min-width: @width-lg) {
     padding-top: 45px;
     padding-left: 0;
+
+    column-gap: 42px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 120px;
+    right: -1000px;
+    left: -1000px;
+
+    height: 1px;
+
+    background-color: @blue-gray-10;
+
+    content: "";
+
+    @media (min-width: @width-md) {
+      top: 112px;
+      right: 0;
+      left: 35px;
+
+      box-shadow: 0 72px 0 0 @blue-gray-10, 0 144px 0 0 @blue-gray-10;
+    }
+
+    @media (min-width: @width-lg) {
+      top: 112px;
+      right: 60px;
+      left: 0;
+
+      box-shadow: 0 72px 0 0 @blue-gray-10;
+    }
   }
 }
 
 .upload__controls-list {
   display: grid;
-  margin: 0;
   padding: 0;
 
   grid-column: 1 / -1;
@@ -164,20 +198,25 @@
     grid-template-rows: repeat(3, 1fr);
     grid-column: 2 / -1;
     grid-row: 1 / -1;
-    row-gap: 49px;
+    row-gap: 50px;
   }
 }
 
 .upload__controls-list.slider__list {
+  margin: 0;
+
+  @media (min-width: @width-md) {
+    margin-right: 20px;
+  }
+
   @media (min-width: @width-lg) {
-    margin-top: 22px;
+    margin-top: 16px;
+    margin-right: 92px;
   }
 }
 
 .upload__label {
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 
 .upload__control {
@@ -215,8 +254,19 @@
   cursor: pointer;
 }
 
-.upload__control::-moz-range-thumb:active,
-.upload__control::-webkit-slider-thumb:active {
+.upload__control:focus::-webkit-slider-thumb {
+  background-color: @pinky-red;
+}
+
+.upload__control:focus::-moz-range-thumb {
+  background-color: @pinky-red;
+}
+
+.upload__control:active::-webkit-slider-thumb {
+  background-color: @pinky-red;
+}
+
+.upload__control:active::-moz-range-thumb {
   background-color: @pinky-red;
 }
 
@@ -263,6 +313,7 @@
   font-weight: bold;
   color: @pinky-red;
 
+  background-color: inherit;
   border: 3px solid @pinky-red;
   border-radius: 30px;
 

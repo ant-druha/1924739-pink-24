@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" crossorigin="anonymous" as="font">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -11,23 +12,23 @@
     <title>Конкурс</title>
   </head>
   <body>
-    <header class="header main-nav--closed header--nojs">
+    <header class="header header--nav-closed header--nojs">
       <div class="wrapper">
-        <a class="header__logo logo" href="index.html">
-          <svg class="logo--sm" width="75" height="23">
+        <a class="header__logo logo" href="index.html" aria-label="Перейти на главную страницу.">
+          <svg class="logo__sm" width="75" height="23" aria-label="Логотип PINK.">
             <use class="logo__text" xlink:href="img/sprite.svg#logo-text-simple" width="75" height="23"></use>
           </svg>
-          <svg class="logo--md" width="145" height="40">
+          <svg class="logo__md" width="145" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-simple" width="59" height="40"></use>
             <use class="logo__text" x="71" y="18" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
           </svg>
-          <svg class="logo--lg" width="147" height="40">
+          <svg class="logo__lg" width="147" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-desktop" width="61" height="40"></use>
             <use class="logo__text" x="71" y="7" xlink:href="img/sprite.svg#logo-text-desktop" width="75" height="34"></use>
           </svg>
         </a>
 
-        <button class="header__main-nav-toggle main-nav__toggle" type="button">
+        <button class="header__nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <nav class="header__main-nav main-nav">
@@ -50,7 +51,7 @@
     </header>
 
     <main class="contest">
-      <section class="contest__intro intro">
+      <section class="contest__intro intro intro--contest">
         <div class="intro__top intro__top--contest">
           <div class="intro__wrapper wrapper">
             <h1 class="contest__intro-title intro__title title">Конкурс на самое безбашенное путешествие с Пинк</h1>
@@ -58,7 +59,7 @@
         </div>
         <div class="intro__bottom-contest">
           <div class="intro__wrapper wrapper">
-            <p class="intro__text intro__text--contest">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="intro__text--contest-note">Пожалуйста, заполните форму ниже:</span></p>
+            <p class="intro__text intro__text--contest">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="intro__text-note">Пожалуйста, заполните форму ниже:</span></p>
           </div>
         </div>
       </section>
@@ -163,7 +164,7 @@
 
         <div class="form__submit contest__form-submit">
           <button class="button form__button" type="submit">Отправить форму</button>
-          <p class="contest__form-legend"><span class="contest__form-legend-star">*</span> — обязательные <span class="contest__form-legend--desktop-note">для заполнения</span> поля</p>
+          <p class="contest__form-legend"><span class="contest__form-legend-star">*</span> — обязательные <span class="contest__form-legend-desktop-note">для заполнения</span> поля</p>
         </div>
 
         <div class="modal-container modal-container--close">
@@ -185,12 +186,12 @@
 
     <footer class="footer">
       <div class="footer__wrapper wrapper">
-        <a class="footer__logo logo">
-          <svg class="logo--md" width="145" height="40">
+        <a class="footer__logo logo" href="index.html" aria-label="Перейти на главную страницу.">
+          <svg class="logo__md" width="145" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-simple" width="59" height="40"></use>
             <use class="logo__text" x="71" y="18" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
           </svg>
-          <svg class="logo--lg" width="147" height="40">
+          <svg class="logo__lg" width="147" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-desktop" width="61" height="40"></use>
             <use class="logo__text" x="71" y="6" xlink:href="img/sprite.svg#logo-text-desktop" width="75" height="34"></use>
           </svg>

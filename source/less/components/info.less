@@ -109,7 +109,7 @@
       font-size: 120px;
       line-height: 1.36;
 
-      background-size: cover;
+      background-size: contain;
     }
   }
 
@@ -144,41 +144,27 @@
   color: #000000;
 
   @media (min-width: @width-md) {
+    width: 270px;
     margin-bottom: 10px;
   }
 
   @media (min-width: @width-lg) {
+    width: unset;
     margin-top: 50px;
     margin-bottom: 22px;
-
-    br {
-      display: none;
-    }
   }
 }
 
 .info__effect-text {
-  @media (max-width: @width-md-only) {
-    br {
-      display: none;
-    }
-  }
-
   @media (min-width: @width-md) {
     margin: 0 0 10px;
   }
 
   @media (min-width: @width-lg) {
     margin-bottom: 30px;
-
-    br {
-      display: none;
-    }
   }
 }
 
 .info__effect-link {
   color: @pinky-red;
-
-  text-decoration-line: underline;
 }

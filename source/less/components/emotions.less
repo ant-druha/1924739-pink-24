@@ -46,6 +46,7 @@
   border: none;
   border-radius: 1px;
 
+  resize: none;
   outline: 2px solid @light-grey2;
 
   &::placeholder {
@@ -53,6 +54,10 @@
   }
 
   &:hover {
+    outline-color: @blue-gray;
+  }
+
+  &:focus {
     outline-color: @blue-gray;
   }
 

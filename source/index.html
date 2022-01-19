@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" crossorigin="anonymous" as="font">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -11,23 +12,23 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="header main-nav--closed header--nojs">
+    <header class="header header--nav-closed header--nojs">
       <div class="wrapper">
-        <a class="header__logo logo" href="index.html">
-          <svg class="logo--sm" width="75" height="23">
+        <a class="header__logo logo" href="index.html" aria-label="Перейти на главную страницу.">
+          <svg class="logo__sm" width="75" height="23" aria-label="Логотип PINK.">
             <use class="logo__text" xlink:href="img/sprite.svg#logo-text-simple" width="75" height="23"></use>
           </svg>
-          <svg class="logo--md" width="145" height="40">
+          <svg class="logo__md" width="145" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-simple" width="59" height="40"></use>
             <use class="logo__text" x="71" y="18" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
           </svg>
-          <svg class="logo--lg" width="147" height="40">
+          <svg class="logo__lg" width="147" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-desktop" width="61" height="40"></use>
             <use class="logo__text" x="71" y="7" xlink:href="img/sprite.svg#logo-text-desktop" width="75" height="34"></use>
           </svg>
         </a>
 
-        <button class="header__main-nav-toggle main-nav__toggle" type="button">
+        <button class="header__nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <nav class="header__main-nav main-nav">
@@ -54,11 +55,11 @@
 
       <section class="index__intro intro">
         <div class="intro__wrapper wrapper">
-          <h2 class="index__intro-title intro__title title">Взгляните <br>на жизнь <br>иначе!</h2>
+          <h2 class="index__intro-title intro__title title">Взгляните на&nbsp;жизнь иначе!</h2>
         </div>
         <div class="intro__bottom-index">
           <div class="intro__wrapper wrapper">
-            <a class="button button--download intro__button-download" href="#">Скачать приложение</a>
+            <a class="button button--download intro__button-download" href="https://appstore.com/">Скачать приложение</a>
             <ul class="intro__store-list store-list">
               <li class="store-list__item">
                 <a href="https://appstore.com/" class="store-list__link store-list__link--apple">
@@ -97,7 +98,7 @@
                 <p class="list-info__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br>усилить эффект</p>
               </li>
               <li class="list-info__item list-info__item--friends">
-                <h3 class="list-info__title title">Заводит <br>новых друзей</h3>
+                <h3 class="list-info__title title">Заводит новых&nbsp;друзей</h3>
                 <p class="list-info__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
             </ul>
@@ -106,9 +107,9 @@
         <section class="info__effect">
           <div class="wrapper">
             <div class="info__effect-content">
-              <h3 class="info__effect-title title">Эффект <br>на 24 часа!</h3>
-              <p class="info__effect-text">Британские ученые провели исследования <br>и доказали, что&nbsp;положительный эффект <br>от использования приложения длится целые сутки!</p>
-              <a href="#" class="info__effect-link">Узнать больше об исследовании</a>
+              <h3 class="info__effect-title title">Эффект на&nbsp;24&nbsp;часа!</h3>
+              <p class="info__effect-text">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
+              <a href="#" class="link info__effect-link">Узнать больше об исследовании</a>
             </div>
           </div>
         </section>
@@ -127,9 +128,9 @@
             </blockquote>
           </div>
           <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle reviews__toggle slider__toggle--current" type="button"></button>
-            <button class="slider__toggle reviews__toggle" type="button"></button>
-            <button class="slider__toggle reviews__toggle" type="button"></button>
+            <button class="slider__toggle reviews__toggle slider__toggle--current" type="button" aria-label="Показать предыдущий отзыв."></button>
+            <button class="slider__toggle reviews__toggle" type="button" aria-label="Показать следующий отзыв."></button>
+            <button class="slider__toggle reviews__toggle" type="button" aria-label="Показать следующий отзыв."></button>
           </p>
         </div>
       </section>
@@ -137,86 +138,82 @@
       <section class="tariffs">
         <h2 class="visually-hidden">Тарифы и цены.</h2>
 
-        <div class="tariffs__wrapper wrapper slider">
-          <table class="tariffs__table table-tariffs">
-            <thead class="table-tariffs__head">
-            <tr class="table-tariffs__header-row slider__list">
-              <th class="table-tariffs__header"></th>
-              <th class="table-tariffs__header table-tariffs__column slider__item">
-                <b class="table-tariffs__title">База</b>
-                <p class="table-tariffs__price">1,99 USD</p>
-              </th>
-              <th class="table-tariffs__header table-tariffs__column table-tariffs__header--popular slider__item slider__item--current">
-                <b class="table-tariffs__title">Стандарт</b>
-                <p class="table-tariffs__price">3,99 USD</p>
-              </th>
-              <th class="table-tariffs__header table-tariffs__column slider__item">
-                <b class="table-tariffs__title">Анлим</b>
-                <p class="table-tariffs__price">9,99 USD</p>
-              </th>
-            </tr>
-            </thead>
-            <tbody class="table-tariffs__body">
-            <tr class="table-tariffs__row table-tariffs__feature">
-              <td class="table-tariffs__feature-name table-tariffs__column">Розовый фильтр</td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included">
-                <span class="table-tariffs__feature-name">Розовый фильтр</span>
-              </td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included">
-                <span class="table-tariffs__feature-name">Розовый фильтр</span>
-              </td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included">
-                <span class="table-tariffs__feature-name">Розовый фильтр</span>
-              </td>
-            </tr>
-            <tr class="table-tariffs__row table-tariffs__feature">
-              <td class="table-tariffs__feature-name table-tariffs__column">Смайлики</td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--excluded">
-<!--                Нет-->
-                <span class="table-tariffs__feature-name">Смайлики</span>
-              </td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included">
-<!--                Да-->
-                <span class="table-tariffs__feature-name">Смайлики</span>
-              </td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included">
-<!--                Да-->
-                <span class="table-tariffs__feature-name">Смайлики</span>
-              </td>
-            </tr>
-            <tr class="table-tariffs__row table-tariffs__feature">
-              <td class="table-tariffs__feature-name table-tariffs__column">Комментарии</td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--excluded">
-<!--                Нет-->
-                <span class="table-tariffs__feature-name">Комментарии</span>
-              </td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--excluded">
-<!--                Нет-->
-                <span class="table-tariffs__feature-name">Комментарии</span>
-              </td>
-              <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included">
-<!--                Да-->
-                <span class="table-tariffs__feature-name">Комментарии</span>
-              </td>
-            </tr>
-            </tbody>
-          </table>
+        <div class="slider">
+          <div class="tariffs__wrapper wrapper">
+            <table class="tariffs__table table-tariffs">
+              <thead class="table-tariffs__head">
+              <tr class="table-tariffs__header-row slider__list">
+                <th class="table-tariffs__header"></th>
+                <th class="table-tariffs__header table-tariffs__column slider__item">
+                  <b class="table-tariffs__title">База</b>
+                  <p class="table-tariffs__price">1,99 USD</p>
+                </th>
+                <th class="table-tariffs__header table-tariffs__column table-tariffs__header--popular slider__item slider__item--current">
+                  <b class="table-tariffs__title">Стандарт</b>
+                  <p class="table-tariffs__price">3,99 USD</p>
+                </th>
+                <th class="table-tariffs__header table-tariffs__column slider__item">
+                  <b class="table-tariffs__title">Анлим</b>
+                  <p class="table-tariffs__price">9,99 USD</p>
+                </th>
+              </tr>
+              </thead>
+              <tbody class="table-tariffs__body">
+              <tr class="table-tariffs__row table-tariffs__feature">
+                <td class="table-tariffs__feature-name table-tariffs__column">Розовый фильтр</td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included" aria-label="Да.">
+                  <span class="table-tariffs__feature-name">Розовый фильтр</span>
+                </td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included" aria-label="Да.">
+                  <span class="table-tariffs__feature-name">Розовый фильтр</span>
+                </td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included" aria-label="Да.">
+                  <span class="table-tariffs__feature-name">Розовый фильтр</span>
+                </td>
+              </tr>
+              <tr class="table-tariffs__row table-tariffs__feature">
+                <td class="table-tariffs__feature-name table-tariffs__column">Смайлики</td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--excluded" aria-label="Нет.">
+                  <span class="table-tariffs__feature-name">Смайлики</span>
+                </td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included" aria-label="Да.">
+                  <span class="table-tariffs__feature-name">Смайлики</span>
+                </td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included" aria-label="Да.">
+                  <span class="table-tariffs__feature-name">Смайлики</span>
+                </td>
+              </tr>
+              <tr class="table-tariffs__row table-tariffs__feature">
+                <td class="table-tariffs__feature-name table-tariffs__column">Комментарии</td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--excluded" aria-label="Нет.">
+                  <span class="table-tariffs__feature-name">Комментарии</span>
+                </td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--excluded" aria-label="Нет.">
+                  <span class="table-tariffs__feature-name">Комментарии</span>
+                </td>
+                <td class="table-tariffs__feature-value table-tariffs__column table-tariffs__feature-value--included" aria-label="Да.">
+                  <span class="table-tariffs__feature-name">Комментарии</span>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tariffs__toggles slider__toggles">
+            <button class="slider__toggle tariffs__toggle" type="button" aria-label="Тариф База."></button>
+            <button class="slider__toggle tariffs__toggle slider__toggle--current" type="button" aria-label="Тариф Стандарт."></button>
+            <button class="slider__toggle tariffs__toggle" type="button" aria-label="Тариф Анлим."></button>
+          </p>
         </div>
-        <p class="tariffs__toggles slider__toggles">
-          <button class="slider__toggle tariffs__toggle" type="button"></button>
-          <button class="slider__toggle tariffs__toggle slider__toggle--current" type="button"></button>
-          <button class="slider__toggle tariffs__toggle" type="button"></button>
-        </p>
       </section>
 
       <section class="contacts">
         <div class="contacts__wrapper wrapper">
           <h2 class="contacts__title title">Остались вопросы?<br>Свяжитесь с нами!</h2>
           <p class="contacts__type contacts__type--phone">Звоните:
-            <a class="contacts__type-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            <a class="link contacts__type-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </p>
           <p class="contacts__type contacts__type--write">Пишите:
-            <a class="contacts__type-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="link contacts__type-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <address class="contacts__type contacts__type--address">Приезжайте в гости:
             <p class="contacts__type-text">ул. Большая<br>Конюшенная, 19/8</p>
@@ -233,12 +230,12 @@
 
     <footer class="footer">
       <div class="footer__wrapper wrapper">
-        <a class="footer__logo logo">
-          <svg class="logo--md" width="145" height="40">
+        <a class="footer__logo logo" href="index.html" aria-label="Перейти на главную страницу.">
+          <svg class="logo__md" width="145" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-simple" width="59" height="40"></use>
             <use class="logo__text" x="71" y="18" xlink:href="img/sprite.svg#logo-text-simple" width="74" height="23"></use>
           </svg>
-          <svg class="logo--lg" width="147" height="40">
+          <svg class="logo__lg" width="147" height="40" aria-label="Логотип PINK.">
             <use class="logo__image" xlink:href="img/sprite.svg#logo-image-desktop" width="61" height="40"></use>
             <use class="logo__text" x="71" y="6" xlink:href="img/sprite.svg#logo-text-desktop" width="75" height="34"></use>
           </svg>

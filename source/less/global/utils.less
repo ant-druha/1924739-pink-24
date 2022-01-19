@@ -32,3 +32,9 @@
   background-image: linear-gradient(@deg, transparent @gradient-gray-height, @light-grey2 @gradient-gray-height + 1);
   background-repeat: no-repeat;
 }
+
+.bg-input-contacts(@img-w, @img-h, @gradient-width, @img-file-url) {
+  @img-x: calc(100% - @gradient-width / 2 + @img-w / 2);
+
+  background: no-repeat @img-x center / @img-w @img-h url(@img-file-url), linear-gradient(to left, @light-grey @gradient-width, transparent 0);
+}

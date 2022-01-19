@@ -14,7 +14,7 @@
     content: "";
     background-image: url("../../img/back-mobile.jpg");
     background-position: top;
-    background-size: cover;
+    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/back-mobile@2x.jpg");
@@ -23,6 +23,7 @@
     @media (min-width: @width-md) {
       top: -@height-header-md;
 
+      background-size: cover;
       background-image: url("../../img/back-tablet.jpg");
 
       @media (min-resolution: 2dppx) {
@@ -36,6 +37,13 @@
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/back-desktop@2x.jpg");
       }
+    }
+  }
+
+  &--contest,
+  &--catalog {
+    &::before {
+      background-size: cover;
     }
   }
 }
@@ -183,18 +191,13 @@
   .list-style-default;
 
   margin: 0 auto 22px auto;
-  padding-right: 38px;
-  padding-left: 38px;
 
   @media (min-width: @width-md) {
     margin-bottom: 33px;
-    padding-left: 47px;
   }
 
   @media (min-width: @width-lg) {
     margin-bottom: 50px;
-    margin-left: 47px;
-    padding: 0;
   }
 }
 
@@ -240,12 +243,12 @@
       max-width: 760px;
     }
   }
+}
 
-  &--contest-note {
-    display: none;
+.intro__text-note {
+  display: none;
 
-    @media (min-width: @width-md) {
-      display: inline;
-    }
+  @media (min-width: @width-md) {
+    display: inline;
   }
 }
